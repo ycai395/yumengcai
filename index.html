@@ -90,21 +90,28 @@
       align-items: flex-start;
       margin: 14px 0 18px;
     }
-
-    /* Each individual subfigure */
+    
     .subfig {
       flex: 1 1 280px;
       max-width: 360px;
       text-align: center;
     }
-
-    .subfig img {
-      width: 100%;
+    
+    .subfig-imgbox {
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .subfig-imgbox img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
       height: auto;
       border-radius: 8px;
-      display: block;
     }
-
+    
     .subfig-caption {
       margin-top: 6px;
       font-size: 0.92rem;
@@ -320,26 +327,33 @@
         Georgia Institute of Technology | Advisor: Prof. Jaydev P. Desai
       </p>
 
-      <!-- CURRENT SINGLE-IMAGE VERSION -->
       <div class="subfig-row">
-
+      
         <div class="subfig">
-          <img
-            src="images/guidewire2.png"
-            alt="Robotic guidewire">
+          <div class="subfig-imgbox">
+            <img
+              src="images/guidewire2.png"
+              alt="Robotic guidewire">
+          </div>
+      
           <div class="subfig-caption">
             Robotic guidewire
           </div>
         </div>
-
+      
         <div class="subfig">
-          <img
-            src="images/guidewire.png"
-            alt="Guidewire tracking">
+          <div class="subfig-imgbox">
+            <img
+              src="images/guidewire.png"
+              alt="Guidewire tracking">
+          </div>
+      
           <div class="subfig-caption">
             Image-based guidewire tracking
           </div>
         </div>
+
+</div>
 
     </div>
 
