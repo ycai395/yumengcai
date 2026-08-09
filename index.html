@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yumeng Cai</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -73,7 +74,7 @@
       width: 100%;
       max-width: 720px;
       border-radius: 8px;
-      margin: 10px 0 14px;
+      margin: 12px auto 14px;
       display: block;
     }
 
@@ -82,6 +83,7 @@
       font-weight: normal;
       color: #555;
       font-size: 0.95rem;
+      margin-left: 20px;
     }
 
     ul {
@@ -94,12 +96,18 @@
     }
 
     .pub-list li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
-    .small-note {
-      color: #666;
-      font-size: 0.95rem;
+    .info-grid {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 8px 18px;
+      margin-top: 14px;
+    }
+
+    .info-label {
+      font-weight: bold;
     }
 
     a {
@@ -110,6 +118,7 @@
       .date {
         float: none;
         display: block;
+        margin-left: 0;
         margin-top: 4px;
       }
 
@@ -117,165 +126,561 @@
         display: inline-block;
         margin-bottom: 8px;
       }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- =========================
+       HEADER
+       ========================= -->
+
   <h1>Yumeng Cai</h1>
-  <p class="subtitle">M.S. in Robotics, Georgia Institute of Technology</p>
+
+  <p class="subtitle">
+    M.S. in Robotics, Georgia Institute of Technology
+  </p>
 
   <p>
-    I am a Master's student in Robotics at Georgia Tech, with interests in robotic surgery,
-    medical robotics, soft robotics, and intelligent robotic systems. My work spans robotic
-    surgery gap discovery, single-cell analysis for neuroimmune state characterization,
-    image-guided robotic guidewire navigation, wearable assistive robots, and soft robotic
-    systems for minimally invasive surgery.
+    I am a Master's student in Robotics at Georgia Tech.
+    My research interests include medical robotics, robotic surgery,
+    soft robotics, and intelligent robotic systems.
+    My work spans image-guided robotic navigation, soft robotic manipulators,
+    surgical workflow and gap analysis, wearable assistive robotics,
+    and data-driven biomedical research.
   </p>
+
+
+  <!-- =========================
+       NAVIGATION
+       ========================= -->
 
   <div class="nav">
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
+    <a href="#projects">Research</a>
     <a href="#publications">Publications</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#skills">Skills</a>
     <a href="#cv">CV</a>
     <a href="#contact">Contact</a>
   </div>
 
+
+  <!-- =========================
+       ABOUT
+       ========================= -->
+
   <div class="section" id="about">
     <h2>About</h2>
+
     <p>
-      I am currently pursuing a Master's degree in Robotics at the Georgia Institute of Technology.
-      Previously, I received my B.Eng. in Robotics Engineering from South China University of Technology.
-      My recent research focuses on robotic surgery workflow analysis, medical robotics, soft robotic
-      systems, and data-driven analysis for biological and clinical applications.
+      I am currently pursuing an M.S. in Robotics at the Georgia Institute
+      of Technology, with an expected graduation date of May 2027.
+      Previously, I received my B.E. in Robotics Engineering from
+      South China University of Technology.
+    </p>
+
+    <p>
+      My current research focuses on medical and surgical robotics,
+      including image-guided robotic navigation, soft robotic systems,
+      and AI-assisted analysis of robotic surgical workflows.
+      I am also interested in integrating sensing, perception, control,
+      and learning for intelligent robotic systems.
     </p>
   </div>
+
+
+  <!-- =========================
+       RESEARCH EXPERIENCE
+       ========================= -->
 
   <div class="section" id="projects">
     <h2>Selected Research Experience</h2>
 
+
+    <!-- Robotic Surgery Gap Discovery -->
+
     <div class="project">
-      <h3>Robotic Surgery Gap Discovery <span class="date">05/2026-present</span></h3>
-      <p class="project-meta">Advisor: Professor Jun Ueda</p>
+      <h3>
+        Robotic Surgery Gap Discovery
+        <span class="date">May 2026 – Present</span>
+      </h3>
+
+      <p class="project-meta">
+        Georgia Institute of Technology | Advisor: Prof. Jun Ueda
+      </p>
+
+      <!--
+      <img
+        src="images/robotic_gap_discovery.png"
+        alt="Robotic Surgery Gap Discovery">
+      -->
+
       <ul>
-        <li>Developed a pipeline to analyze robotic and laparoscopic surgical literature for identifying under-supported functional needs in robotic procedures.</li>
-        <li>Introduced capability-level gap reasoning to capture surgical functions that are insufficiently supported, rather than relying only on missing instrument names.</li>
+        <li>
+          Developed an AI-assisted analysis pipeline to identify
+          under-addressed functional needs and research gaps in robotic
+          and laparoscopic surgery.
+        </li>
       </ul>
     </div>
 
+
+    <!-- Single Cell -->
+
     <div class="project">
-      <h3>Single-Cell Analysis of GRM5/Grm5-Associated Microglial State <span class="date">03/2026-present</span></h3>
-      <p class="project-meta">Advisor: Professor Levi Wood</p>
+      <h3>
+        Data-Driven Single-Cell Analysis of GRM5/Grm5-Associated Microglial States
+        <span class="date">Mar. 2026 – Present</span>
+      </h3>
+
+      <p class="project-meta">
+        Georgia Institute of Technology | Advisor: Prof. Levi Wood
+      </p>
+
+      <!--
+      <img
+        src="images/microglial_state.png"
+        alt="Single-Cell Analysis of Microglial States">
+      -->
+
       <ul>
-        <li>Analyzed mouse and human single-cell transcriptomic datasets for the association between GRM5/Grm5 and microglial states.</li>
-        <li>Built a Scanpy-based workflow for microglia clustering across different states.</li>
-        <li>Applied Spearman correlation and FDR correction to identify genes associated with Grm5 and compare canonical marker programs.</li>
+        <li>
+          Analyzed mouse and human single-cell data to characterize
+          GRM5/Grm5-associated microglial states.
+        </li>
+
+        <li>
+          Applied Spearman correlation and FDR correction to identify
+          genes associated with Grm5 expression and compare canonical
+          marker programs.
+        </li>
       </ul>
     </div>
 
+
+    <!-- Guidewire -->
+
     <div class="project">
-      <h3>Image-Guided Closed-Loop Robotic Guidewire Navigation System <span class="date">09/2025-02/2026</span></h3>
-      <p class="project-meta">Advisor: Professor Jaydev P. Desai</p>
-      <img src="images/guidewire.png" alt="Image-Guided Closed-Loop Robotic Guidewire Navigation System">
+      <h3>
+        Image-Guided Robotic Guidewire Navigation System
+        <span class="date">Sep. 2025 – Feb. 2026</span>
+      </h3>
+
+      <p class="project-meta">
+        Georgia Institute of Technology | Advisor: Prof. Jaydev P. Desai
+      </p>
+
+      <img
+        src="images/guidewire.png"
+        alt="Image-Guided Robotic Guidewire Navigation System">
+
       <ul>
-        <li>Design and develop a two-way bending guidewire with control platform.</li>
-        <li>Develop a C-arm–based guidewire perception pipeline to robustly track the guidewire.</li>
-        <li>Design and implement real-time feedback control to autonomously steer the guidewire to targets.</li>
+        <li>
+          Designed and developed a bidirectionally steerable guidewire
+          and its robotic control platform.
+        </li>
+
+        <li>
+          Developed a C-arm image-based perception pipeline for robust
+          real-time guidewire tracking.
+        </li>
+
+        <li>
+          Developed an image-guided path-planning framework for guidewire
+          navigation toward predefined targets.
+        </li>
       </ul>
     </div>
 
+
+    <!-- Soft Manipulator -->
+
     <div class="project">
-      <h3>Soft Wearable Assistive Robots Exosuit <span class="date">07/2024-09/2024</span></h3>
-      <p class="project-meta">University of Notre Dame – Summer Research Program Project (iSURE); Advisor: Professor Margaret Coad</p>
-      <img src="images/exosuit.jpg" alt="Soft Wearable Assistive Robots Exosuit" style="width:100%; max-width:450px; border-radius:8px; margin:12px auto 14px; display:block;">
+      <h3>
+        Miniature Hybrid-Actuated Soft Manipulator with FBG-Based Shape Sensing
+        <span class="date">Sep. 2024 – Mar. 2026</span>
+      </h3>
+
+      <p class="project-meta">
+        South China University of Technology | Advisor: Prof. Yitong Zhou
+      </p>
+
+      <!-- Change filename if necessary -->
+      <img
+        src="images/continuum_robot.png"
+        alt="Miniature Hybrid-Actuated Soft Manipulator">
+
       <ul>
-        <li>Researched soft and bioinspired designs, models, and control methods for exosuits and prosthetic limbs.</li>
-        <li>Took charge of improving the entire system, liaising with the health center, and collecting data to further make the wearable device more comfortable for users.</li>
+        <li>
+          Designed a miniature soft continuum robot integrating
+          cable-driven and pneumatic actuation for minimally invasive procedures.
+        </li>
+
+        <li>
+          Developed an FBG-based shape-sensing pipeline using a
+          data-driven prediction model and two-segment PCC modeling
+          for shape reconstruction.
+        </li>
+
+        <li>
+          Achieved independent 6-DoF motion in an 11-mm-diameter
+          soft manipulator.
+        </li>
       </ul>
     </div>
 
+
+    <!-- Exosuit -->
+
     <div class="project">
-      <h3>A Six-Degree-of-Freedom Soft Continuum Robot Based on the FBG Principle for Shape Reconstruction in Minimally Invasive Surgery <span class="date">01/2024-06/2025</span></h3>
-      <p class="project-meta">Undergraduate Thesis Project</p>
-      <img src="images/continuum_robot.jpg" alt="Six-Degree-of-Freedom Soft Continuum Robot">
+      <h3>
+        Soft Wearable Assistive Exosuit
+        <span class="date">Jul. 2024 – Sep. 2024</span>
+      </h3>
+
+      <p class="project-meta">
+        University of Notre Dame | Advisor: Prof. Margaret Coad
+      </p>
+
+      <img
+        src="images/exosuit.png"
+        alt="Soft Wearable Assistive Exosuit">
+
       <ul>
-        <li>Designed innovative miniature continuum robots by integrating cable-driven and pneumatic actuation mechanisms.</li>
-        <li>Determined the current shape of the actuator by integrating data from FBG sensors with a model.</li>
-        <li>Achieved independent 6 degrees of freedom; the actuator’s diameter is 10mm.</li>
+        <li>
+          Investigated soft and bioinspired design, modeling, and control
+          methods for wearable exosuits and prosthetic systems.
+        </li>
+
+        <li>
+          Led system-level improvements, coordinated experimental
+          evaluation with the health center, and collected data to
+          improve comfort and usability.
+        </li>
       </ul>
     </div>
 
+
+    <!-- Quadrupedal -->
+
     <div class="project">
-      <h3>Jellyfish Amphibious Robot based on Steady State Response <span class="date">06/2023-09/2024</span></h3>
-      <img src="images/jellyfish_robot.jpg" alt="Jellyfish Amphibious Robot">
+      <h3>
+        Hydrodynamics of Quadrupedal Robotic Paddling
+        <span class="date">Sep. 2023 – Jul. 2024</span>
+      </h3>
+
+      <p class="project-meta">
+        South China University of Technology | Advisor: Prof. Ye Chen
+      </p>
+
+      <!--
+      <img
+        src="images/quadrupedal_paddling.png"
+        alt="Hydrodynamics of Quadrupedal Robotic Paddling">
+      -->
+
       <ul>
-        <li>Simulated soft actuators of various sizes and fabrication processes, and designed jellyfish-like structure.</li>
-        <li>Conducted mechanical performance and integrated testing of the soft actuator.</li>
-        <li>Precisely controlled all modules, including circuits and sensors through a microcontroller; established the system control logic and improved the execution accuracy.</li>
-        <li>Engaged in data collection, analysis, and drafting of the thesis; expected to be completed by the beginning of 2025.</li>
+        <li>
+          Analyzed hydrodynamic forces, power consumption, and flow-field
+          characteristics of single-leg and quadrupedal paddling across
+          multiple gait patterns, including diagonal and lateral-sequence
+          gaits, with varying swing angles, ranges, and phase relationships.
+        </li>
+
+        <li>
+          Processed large-scale simulation datasets on Linux (Ubuntu)
+          for quadrupedal paddling analysis.
+        </li>
+
+        <li>
+          Post-processed and visualized CFD results using Tecplot.
+        </li>
       </ul>
     </div>
 
+
+    <!-- Jellyfish -->
+
     <div class="project">
-      <h3>A Computational Study of the Hydrodynamics of Quadrupedal Paddling – Physics of Fluids <span class="date">09/2023-07/2024</span></h3>
-      <p class="project-meta">Research Member in a Team of 3 Students</p>
-      <img src="images/quadrupedal_paddling.jpg" alt="Hydrodynamics of Quadrupedal Paddling">
+      <h3>
+        Jellyfish-Inspired Amphibious Soft Robot
+        <span class="date">Jun. 2023 – Sep. 2024</span>
+      </h3>
+
+      <p class="project-meta">
+        South China University of Technology | Advisor: Prof. Yitong Zhou
+      </p>
+
+      <!--
+      <img
+        src="images/jellyfish_robot.png"
+        alt="Jellyfish-Inspired Amphibious Soft Robot">
+      -->
+
       <ul>
-        <li>Calculated the forces, power consumption, and impact on flow fields for both single-leg and quadruped configurations across various gait patterns, including diagonal and lateral sequence gaits, along with the initial swing angle, swing range, and power phase of the legs in each gait.</li>
-        <li>Processed large volumes of calculated data with Ubuntu Subsystem using a four-legged robot dog model.</li>
-        <li>Made realistic renderings of fluids and solids with Tecplot.</li>
+        <li>
+          Simulated soft actuators of various sizes to guide the design
+          of the jellyfish-like structure and fabrication processes.
+        </li>
+
+        <li>
+          Integrated sensing, actuation, embedded electronics, and
+          microcontroller-based control for coordinated robot motion.
+        </li>
       </ul>
     </div>
 
+
+    <!-- Fiber Sensor -->
+
     <div class="project">
-      <h3>A High Sensitivity Flexible Stretchable Fiber Optic Sensor based on the Waveguide Loss Principle – IEEE Transactions on Instrumentation &amp; Measurement <span class="date">01/2023-06/2024</span></h3>
-      <p class="project-meta">Research Member in a Team of 3 Students</p>
-      <img src="images/fiber_sensor.jpg" alt="Flexible Stretchable Fiber Optic Sensor">
+      <h3>
+        Stretchable Fiber-Optic Sensor for Large-Strain Sensing
+        <span class="date">Jan. 2023 – Jun. 2024</span>
+      </h3>
+
+      <p class="project-meta">
+        South China University of Technology | Advisor: Prof. Yitong Zhou
+      </p>
+
+      <!--
+      <img
+        src="images/fiber_sensor.png"
+        alt="Stretchable Fiber-Optic Sensor">
+      -->
+
       <ul>
-        <li>Fabricated a flexible, stretchable fiber optic sensor optimized for continuous health monitoring.</li>
-        <li>Conducted a series of performance experiments to characterize the sensor’s ability to measure large strains, low detection limit, and high repeatability.</li>
-        <li>Made a Human-Machine Interaction (HMI) system to translate movements into signals for interaction.</li>
+        <li>
+          Fabricated a flexible, stretchable fiber optic sensor
+          optimized for continuous health monitoring.
+        </li>
+
+        <li>
+          Characterized sensing performance, including strain range,
+          detection limit, and repeatability.
+        </li>
+
+        <li>
+          Developed a human–machine interaction prototype that
+          translated user motion into interaction signals using the sensor.
+        </li>
       </ul>
     </div>
 
+
+    <!-- sEMG Bracelet -->
+
     <div class="project">
-      <h3>Gesture Recognition Smart Bracelet with Low Delay and Low Power Consumption based on Surface Electromyography Signal <span class="date">07/2022-05/2023</span></h3>
-      <img src="images/semg_bracelet.jpg" alt="Gesture Recognition Smart Bracelet">
+      <h3>
+        sEMG-Based Gesture Recognition Smart Bracelet
+        <span class="date">Jul. 2022 – May 2023</span>
+      </h3>
+
+      <p class="project-meta">
+        South China University of Technology | Advisor: Prof. Longhan Xie
+      </p>
+
+      <!--
+      <img
+        src="images/semg_bracelet.png"
+        alt="sEMG-Based Gesture Recognition Smart Bracelet">
+      -->
+
       <ul>
-        <li>Developed solutions for various real-world problems, including: (1) detecting the weak sEMG signal on the wrist and overcoming the noise interference; (2) offline computing on the cloud end; (3) the decreased accuracy of gesture recognition due to changes in wearing style and individual differences.</li>
-        <li>Employed array-based sEMG bracelets, adaptive recognition technology, edge computing, etc.; utilized the fine-tuning model to enhance the bracelet’s robustness.</li>
-        <li>Established a deeper understanding of designing PCB layout; operated and deployed cloud training models, and constructed a CNN artificial intelligence network.</li>
+        <li>
+          Developed signal-processing and recognition methods to address
+          weak wrist sEMG signals, noise interference, and inter-user
+          variability in gesture recognition.
+        </li>
+
+        <li>
+          Designed the PCB and array-based sEMG bracelet, deployed
+          cloud-based training models, and developed a CNN-based
+          gesture recognition network.
+        </li>
       </ul>
     </div>
+
   </div>
+
+
+  <!-- =========================
+       PUBLICATIONS
+       ========================= -->
 
   <div class="section" id="publications">
-    <h2>Selected Publications</h2>
+    <h2>Publications</h2>
+
     <ul class="pub-list">
-      <li>Y. Wang†, Yumeng Cai†, M. Pang, Y. Xu, G. Kassab, C. Zhou, G. Chase, X. Chen, H. Luo and Y. Chen, <i>Fluid-Structure Interaction of Left Ventricle with Impaired Ventricular Contractility</i>, Acta Mechanica Sinica (AMS), 2025.</li>
-      <li>B. Xie, Y. Wang, Yumeng Cai, Zi. Ouyang, C. Zhu, H. Sun, and Y. Chen, <i>Computational Fluid Dynamics Analysis of Tandem Floating Offshore Wind Turbines under Coupled Pitch-Surge Motion: A Comparative Study of the National Renewable Energy Laboratory 5 Megawatt and the International Energy Agency 22 Megawatt Turbines</i>, Physics of Fluids, 2025.</li>
-      <li>Y. Wang†, Yumeng Cai†, B. Xie, C. Zhu, H. Luo, Y. Li, and Y. Chen, <i>A Computational Study of the Hydrodynamics of Quadrupedal Paddling</i>, Biomimetics, 2024.</li>
-      <li>L. Gan, Y. Xu, Yumeng Cai, Y. Zhou, <i>A High Sensitivity Flexible Stretchable Fiber Optic Sensor based on the Waveguide Loss Principle</i>, IEEE Transactions on Instrumentation &amp; Measurement, 2024.</li>
-      <li>J. Liang, G. Lou, F. Zhou, Yumeng Cai, C. Wang, Y. Zhou, <i>Residual Reinforcement Learning Based on Inverse Kinematic Modeling for Soft Robotic Arm Control</i>, ASME Journal of Dynamic Systems, Measurement, and Control, 2024.</li>
-      <li>H. Huang, S. Zhang, Y. Chen, S. Liu, Z. Chen, Yumeng Cai, H. Li, L. Xie, <i>Portable sEMG-Controlled Hand Electrical Stimulation System</i>, IEEE Sensors Journal, 2024.</li>
+
+      <li>
+        <strong>Yumeng Cai†</strong>, L. Gan†, Y. Zhang, X. Wang, Y. Zhou,
+        “A Miniature Hybrid-Actuated Soft Manipulator with FBG-Based Shape
+        Sensing for Confined Medical Procedures,”
+        <i>submitted to IEEE International Conference on Robotics and Biomimetics</i>,
+        2026.
+      </li>
+
+      <li>
+        Y. Wang†, <strong>Yumeng Cai†</strong>, M. Pang, Y. Xu, G. Kassab,
+        C. Zhou, G. Chase, X. Chen, H. Luo and Y. Chen,
+        “Fluid-Structure Interaction of Left Ventricle with Impaired
+        Ventricular Contractility,”
+        <i>Acta Mechanica Sinica</i>, 2025.
+      </li>
+
+      <li>
+        B. Xie, Y. Wang, <strong>Yumeng Cai</strong>, Z. Ouyang, C. Zhu,
+        H. Sun, and Y. Chen,
+        “Computational Fluid Dynamics Analysis of Tandem Floating Offshore
+        Wind Turbines under Coupled Pitch-Surge Motion:
+        A Comparative Study of the National Renewable Energy Laboratory
+        5 Megawatt and the International Energy Agency 22 Megawatt Turbines,”
+        <i>Physics of Fluids</i>, 2025.
+      </li>
+
+      <li>
+        Y. Wang†, <strong>Yumeng Cai†</strong>, B. Xie, C. Zhu, H. Luo,
+        Y. Li, and Y. Chen,
+        “A Computational Study of the Hydrodynamics of Quadrupedal Paddling,”
+        <i>Biomimetics</i>, 2024.
+      </li>
+
+      <li>
+        L. Gan, Y. Xu, <strong>Yumeng Cai</strong>, Y. Zhou,
+        “A High Sensitivity Flexible Stretchable Fiber Optic Sensor based
+        on the Waveguide Loss Principle,”
+        <i>IEEE Transactions on Instrumentation and Measurement</i>, 2024.
+      </li>
+
+      <li>
+        J. Liang, G. Lou, F. Zhou, <strong>Yumeng Cai</strong>, C. Wang,
+        Y. Zhou,
+        “Residual Reinforcement Learning Based on Inverse Kinematic Modeling
+        for Soft Robotic Arm Control,”
+        <i>ASME Journal of Dynamic Systems, Measurement, and Control</i>, 2024.
+      </li>
+
+      <li>
+        H. Huang, S. Zhang, Y. Chen, S. Liu, Z. Chen,
+        <strong>Yumeng Cai</strong>, H. Li, L. Xie,
+        “Portable sEMG-Controlled Hand Electrical Stimulation System,”
+        <i>IEEE Sensors Journal</i>, 2024.
+      </li>
+
     </ul>
 
+    <p><small>† Equal contribution.</small></p>
+
+
     <h3>Patents</h3>
+
     <ul class="pub-list">
-      <li><i>A Gesture Recognition Smart Bracelet System based on Surface Electromyography Signal</i> (Accepted Invention Patent), second patentee, 2023.</li>
-      <li><i>A Base Station Energy Storage Box</i> (Utility Model Patent), second patentee, 2023.</li>
+      <li>
+        “A Gesture Recognition Smart Bracelet System Based on Surface
+        Electromyography Signal,” Invention Patent,
+        second inventor, 2023.
+      </li>
+
+      <li>
+        “A Base Station Energy Storage Box,” Utility Model Patent,
+        second inventor, 2023.
+      </li>
     </ul>
+
   </div>
+
+
+  <!-- =========================
+       TEACHING
+       ========================= -->
+
+  <div class="section" id="teaching">
+    <h2>Teaching</h2>
+
+    <p>
+      <strong>Teaching Assistant, Deformable Bodies (COE 3001)</strong><br>
+      Georgia Institute of Technology, Summer 2026
+    </p>
+  </div>
+
+
+  <!-- =========================
+       SKILLS
+       ========================= -->
+
+  <div class="section" id="skills">
+    <h2>Skills</h2>
+
+    <div class="info-grid">
+
+      <div class="info-label">Programming</div>
+      <div>Python, C/C++, MATLAB, R</div>
+
+      <div class="info-label">Engineering Tools</div>
+      <div>
+        SolidWorks, Altium Designer, Arduino, Tecplot,
+        ANSYS Mechanical, Linux (Ubuntu)
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =========================
+       CV
+       ========================= -->
 
   <div class="section" id="cv">
     <h2>CV</h2>
-    <p><a href="Yumeng Cai_CV.pdf" target="_blank">Download CV (PDF)</a></p>
+
+    <p>
+      <a href="Yumeng_Cai_CV.pdf" target="_blank">
+        Download CV (PDF)
+      </a>
+    </p>
   </div>
+
+
+  <!-- =========================
+       CONTACT
+       ========================= -->
 
   <div class="section" id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:ycai395@gatech.edu">ycai395@gatech.edu</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yumeng-cai-98382b378/" target="_blank">LinkedIn Profile</a></p>
-    <p>GitHub: <a href="https://github.com/ycai395" target="_blank">github.com/ycai395</a></p>
+
+    <p>
+      Email:
+      <a href="mailto:ycai395@gatech.edu">
+        ycai395@gatech.edu
+      </a>
+    </p>
+
+    <p>
+      LinkedIn:
+      <a
+        href="https://www.linkedin.com/in/yumeng-cai-98382b378/"
+        target="_blank">
+        LinkedIn Profile
+      </a>
+    </p>
+
+    <p>
+      GitHub:
+      <a
+        href="https://github.com/ycai395"
+        target="_blank">
+        github.com/ycai395
+      </a>
+    </p>
+
   </div>
+
 </body>
 </html>
