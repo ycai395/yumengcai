@@ -71,7 +71,10 @@
       font-style: italic;
     }
 
-    /* Default style for a single project image */
+    /* ==================================================
+       SINGLE PROJECT IMAGE
+       ================================================== */
+
     .project-image {
       width: 100%;
       max-width: 620px;
@@ -81,7 +84,16 @@
       display: block;
     }
 
-    /* Container for multiple images shown side-by-side */
+    /* Smaller single image, currently used for Exosuit */
+    .project-image.small-single {
+      max-width: 500px;
+    }
+
+
+    /* ==================================================
+       SIDE-BY-SIDE SUBFIGURES
+       ================================================== */
+
     .subfig-row {
       display: flex;
       flex-wrap: wrap;
@@ -90,20 +102,20 @@
       align-items: flex-start;
       margin: 14px 0 18px;
     }
-    
+
     .subfig {
       flex: 1 1 280px;
       max-width: 360px;
       text-align: center;
     }
-    
+
     .subfig-imgbox {
       height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    
+
     .subfig-imgbox img {
       max-width: 100%;
       max-height: 100%;
@@ -111,12 +123,36 @@
       height: auto;
       border-radius: 8px;
     }
-    
+
     .subfig-caption {
       margin-top: 6px;
       font-size: 0.92rem;
       color: #666;
     }
+
+
+    /* ==================================================
+       LARGE SIDE-BY-SIDE FIGURES
+       Used for Soft Manipulator
+       ================================================== */
+
+    .subfig-row.large-pair {
+      gap: 20px;
+    }
+
+    .subfig-row.large-pair .subfig {
+      flex: 1 1 360px;
+      max-width: 420px;
+    }
+
+    .subfig-row.large-pair .subfig-imgbox {
+      height: 340px;
+    }
+
+
+    /* ==================================================
+       OTHER STYLES
+       ================================================== */
 
     .date {
       float: right;
@@ -154,6 +190,11 @@
       color: #0056b3;
     }
 
+
+    /* ==================================================
+       MOBILE
+       ================================================== */
+
     @media (max-width: 700px) {
 
       .date {
@@ -173,6 +214,11 @@
       }
 
       .subfig {
+        flex: 1 1 100%;
+        max-width: 500px;
+      }
+
+      .subfig-row.large-pair .subfig {
         flex: 1 1 100%;
         max-width: 500px;
       }
@@ -253,9 +299,9 @@
     <h2>Selected Research Experience</h2>
 
 
-    <!-- =========================
+    <!-- ==================================================
          Robotic Surgery Gap Discovery
-         ========================= -->
+         ================================================== -->
 
     <div class="project">
 
@@ -279,9 +325,9 @@
     </div>
 
 
-    <!-- =========================
+    <!-- ==================================================
          Single-Cell Analysis
-         ========================= -->
+         ================================================== -->
 
     <div class="project">
 
@@ -312,9 +358,9 @@
     </div>
 
 
-    <!-- =========================
+    <!-- ==================================================
          Guidewire
-         ========================= -->
+         ================================================== -->
 
     <div class="project">
 
@@ -327,35 +373,42 @@
         Georgia Institute of Technology | Advisor: Prof. Jaydev P. Desai
       </p>
 
+
+      <!-- TWO GUIDEWIRE IMAGES -->
+
       <div class="subfig-row">
-      
+
         <div class="subfig">
+
           <div class="subfig-imgbox">
             <img
               src="images/guidewire2.png"
               alt="Robotic guidewire">
           </div>
-      
+
           <div class="subfig-caption">
             Robotic guidewire
           </div>
+
         </div>
-      
+
+
         <div class="subfig">
+
           <div class="subfig-imgbox">
             <img
               src="images/guidewire.png"
               alt="Guidewire tracking">
           </div>
-      
+
           <div class="subfig-caption">
             Image-based guidewire tracking
           </div>
+
         </div>
 
-</div>
+      </div>
 
-    </div>
 
       <ul>
 
@@ -379,9 +432,9 @@
     </div>
 
 
-    <!-- =========================
+    <!-- ==================================================
          Soft Manipulator
-         ========================= -->
+         ================================================== -->
 
     <div class="project">
 
@@ -394,32 +447,43 @@
         South China University of Technology | Advisor: Prof. Yitong Zhou
       </p>
 
-      <div class="subfig-row">
-      
+
+      <!-- LARGE TWO-IMAGE VERSION -->
+
+      <div class="subfig-row large-pair">
+
         <div class="subfig">
+
           <div class="subfig-imgbox">
             <img
               src="images/Actuation_system.png"
               alt="Soft Manipulator System">
           </div>
-      
+
           <div class="subfig-caption">
             Soft Manipulator System
           </div>
+
         </div>
-      
+
+
         <div class="subfig">
+
           <div class="subfig-imgbox">
             <img
               src="images/ShapeRecon_workspace.png"
               alt="Shape Reconstruction">
           </div>
-      
+
           <div class="subfig-caption">
             FBG-based shape reconstruction
           </div>
+
         </div>
-    
+
+      </div>
+
+
       <ul>
 
         <li>
@@ -443,9 +507,9 @@
     </div>
 
 
-    <!-- =========================
+    <!-- ==================================================
          Exosuit
-         ========================= -->
+         ================================================== -->
 
     <div class="project">
 
@@ -458,10 +522,14 @@
         University of Notre Dame | Advisor: Prof. Margaret Coad
       </p>
 
+
+      <!-- SMALLER SINGLE IMAGE -->
+
       <img
-        class="project-image"
+        class="project-image small-single"
         src="images/exosuit.jpg"
         alt="Soft Wearable Assistive Exosuit">
+
 
       <ul>
 
@@ -481,9 +549,9 @@
     </div>
 
 
-    <!-- =========================
+    <!-- ==================================================
          Quadrupedal Paddling
-         ========================= -->
+         ================================================== -->
 
     <div class="project">
 
@@ -524,9 +592,9 @@
     </div>
 
 
-    <!-- =========================
+    <!-- ==================================================
          Jellyfish Robot
-         ========================= -->
+         ================================================== -->
 
     <div class="project">
 
@@ -556,9 +624,9 @@
     </div>
 
 
-    <!-- =========================
+    <!-- ==================================================
          Fiber Sensor
-         ========================= -->
+         ================================================== -->
 
     <div class="project">
 
@@ -598,9 +666,9 @@
     </div>
 
 
-    <!-- =========================
+    <!-- ==================================================
          sEMG Bracelet
-         ========================= -->
+         ================================================== -->
 
     <div class="project">
 
