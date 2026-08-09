@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -70,12 +71,44 @@
       font-style: italic;
     }
 
-    .project img {
+    /* Default style for a single project image */
+    .project-image {
       width: 100%;
-      max-width: 720px;
+      max-width: 620px;
+      height: auto;
       border-radius: 8px;
-      margin: 12px auto 14px;
+      margin: 12px auto 16px;
       display: block;
+    }
+
+    /* Container for multiple images shown side-by-side */
+    .subfig-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 14px 0 18px;
+    }
+
+    /* Each individual subfigure */
+    .subfig {
+      flex: 1 1 280px;
+      max-width: 360px;
+      text-align: center;
+    }
+
+    .subfig img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .subfig-caption {
+      margin-top: 6px;
+      font-size: 0.92rem;
+      color: #666;
     }
 
     .date {
@@ -115,6 +148,7 @@
     }
 
     @media (max-width: 700px) {
+
       .date {
         float: none;
         display: block;
@@ -130,15 +164,21 @@
       .info-grid {
         grid-template-columns: 1fr;
       }
+
+      .subfig {
+        flex: 1 1 100%;
+        max-width: 500px;
+      }
     }
   </style>
 </head>
 
+
 <body>
 
-  <!-- =========================
+  <!-- ==================================================
        HEADER
-       ========================= -->
+       ================================================== -->
 
   <h1>Yumeng Cai</h1>
 
@@ -156,13 +196,13 @@
   </p>
 
 
-  <!-- =========================
+  <!-- ==================================================
        NAVIGATION
-       ========================= -->
+       ================================================== -->
 
   <div class="nav">
     <a href="#about">About</a>
-    <a href="#projects">Research</a>
+    <a href="#research">Research</a>
     <a href="#publications">Publications</a>
     <a href="#teaching">Teaching</a>
     <a href="#skills">Skills</a>
@@ -171,11 +211,12 @@
   </div>
 
 
-  <!-- =========================
+  <!-- ==================================================
        ABOUT
-       ========================= -->
+       ================================================== -->
 
   <div class="section" id="about">
+
     <h2>About</h2>
 
     <p>
@@ -192,20 +233,25 @@
       I am also interested in integrating sensing, perception, control,
       and learning for intelligent robotic systems.
     </p>
+
   </div>
 
 
-  <!-- =========================
+  <!-- ==================================================
        RESEARCH EXPERIENCE
-       ========================= -->
+       ================================================== -->
 
-  <div class="section" id="projects">
+  <div class="section" id="research">
+
     <h2>Selected Research Experience</h2>
 
 
-    <!-- Robotic Surgery Gap Discovery -->
+    <!-- =========================
+         Robotic Surgery Gap Discovery
+         ========================= -->
 
     <div class="project">
+
       <h3>
         Robotic Surgery Gap Discovery
         <span class="date">May 2026 – Present</span>
@@ -215,12 +261,6 @@
         Georgia Institute of Technology | Advisor: Prof. Jun Ueda
       </p>
 
-      <!--
-      <img
-        src="images/robotic_gap_discovery.png"
-        alt="Robotic Surgery Gap Discovery">
-      -->
-
       <ul>
         <li>
           Developed an AI-assisted analysis pipeline to identify
@@ -228,12 +268,16 @@
           and laparoscopic surgery.
         </li>
       </ul>
+
     </div>
 
 
-    <!-- Single Cell -->
+    <!-- =========================
+         Single-Cell Analysis
+         ========================= -->
 
     <div class="project">
+
       <h3>
         Data-Driven Single-Cell Analysis of GRM5/Grm5-Associated Microglial States
         <span class="date">Mar. 2026 – Present</span>
@@ -243,13 +287,8 @@
         Georgia Institute of Technology | Advisor: Prof. Levi Wood
       </p>
 
-      <!--
-      <img
-        src="images/microglial_state.png"
-        alt="Single-Cell Analysis of Microglial States">
-      -->
-
       <ul>
+
         <li>
           Analyzed mouse and human single-cell data to characterize
           GRM5/Grm5-associated microglial states.
@@ -260,13 +299,18 @@
           genes associated with Grm5 expression and compare canonical
           marker programs.
         </li>
+
       </ul>
+
     </div>
 
 
-    <!-- Guidewire -->
+    <!-- =========================
+         Guidewire
+         ========================= -->
 
     <div class="project">
+
       <h3>
         Image-Guided Robotic Guidewire Navigation System
         <span class="date">Sep. 2025 – Feb. 2026</span>
@@ -276,11 +320,14 @@
         Georgia Institute of Technology | Advisor: Prof. Jaydev P. Desai
       </p>
 
+      <!-- CURRENT SINGLE-IMAGE VERSION -->
       <img
+        class="project-image"
         src="images/guidewire.png"
         alt="Image-Guided Robotic Guidewire Navigation System">
 
       <ul>
+
         <li>
           Designed and developed a bidirectionally steerable guidewire
           and its robotic control platform.
@@ -295,13 +342,18 @@
           Developed an image-guided path-planning framework for guidewire
           navigation toward predefined targets.
         </li>
+
       </ul>
+
     </div>
 
 
-    <!-- Soft Manipulator -->
+    <!-- =========================
+         Soft Manipulator
+         ========================= -->
 
     <div class="project">
+
       <h3>
         Miniature Hybrid-Actuated Soft Manipulator with FBG-Based Shape Sensing
         <span class="date">Sep. 2024 – Mar. 2026</span>
@@ -311,12 +363,8 @@
         South China University of Technology | Advisor: Prof. Yitong Zhou
       </p>
 
-      <!-- Change filename if necessary -->
-      <img
-        src="images/continuum_robot.png"
-        alt="Miniature Hybrid-Actuated Soft Manipulator">
-
       <ul>
+
         <li>
           Designed a miniature soft continuum robot integrating
           cable-driven and pneumatic actuation for minimally invasive procedures.
@@ -332,13 +380,18 @@
           Achieved independent 6-DoF motion in an 11-mm-diameter
           soft manipulator.
         </li>
+
       </ul>
+
     </div>
 
 
-    <!-- Exosuit -->
+    <!-- =========================
+         Exosuit
+         ========================= -->
 
     <div class="project">
+
       <h3>
         Soft Wearable Assistive Exosuit
         <span class="date">Jul. 2024 – Sep. 2024</span>
@@ -349,10 +402,12 @@
       </p>
 
       <img
-        src="images/exosuit.png"
+        class="project-image"
+        src="images/exosuit.jpg"
         alt="Soft Wearable Assistive Exosuit">
 
       <ul>
+
         <li>
           Investigated soft and bioinspired design, modeling, and control
           methods for wearable exosuits and prosthetic systems.
@@ -363,13 +418,18 @@
           evaluation with the health center, and collected data to
           improve comfort and usability.
         </li>
+
       </ul>
+
     </div>
 
 
-    <!-- Quadrupedal -->
+    <!-- =========================
+         Quadrupedal Paddling
+         ========================= -->
 
     <div class="project">
+
       <h3>
         Hydrodynamics of Quadrupedal Robotic Paddling
         <span class="date">Sep. 2023 – Jul. 2024</span>
@@ -379,13 +439,13 @@
         South China University of Technology | Advisor: Prof. Ye Chen
       </p>
 
-      <!--
       <img
-        src="images/quadrupedal_paddling.png"
+        class="project-image"
+        src="images/quadrupedal_paddling.jpg"
         alt="Hydrodynamics of Quadrupedal Robotic Paddling">
-      -->
 
       <ul>
+
         <li>
           Analyzed hydrodynamic forces, power consumption, and flow-field
           characteristics of single-leg and quadrupedal paddling across
@@ -401,13 +461,18 @@
         <li>
           Post-processed and visualized CFD results using Tecplot.
         </li>
+
       </ul>
+
     </div>
 
 
-    <!-- Jellyfish -->
+    <!-- =========================
+         Jellyfish Robot
+         ========================= -->
 
     <div class="project">
+
       <h3>
         Jellyfish-Inspired Amphibious Soft Robot
         <span class="date">Jun. 2023 – Sep. 2024</span>
@@ -417,13 +482,8 @@
         South China University of Technology | Advisor: Prof. Yitong Zhou
       </p>
 
-      <!--
-      <img
-        src="images/jellyfish_robot.png"
-        alt="Jellyfish-Inspired Amphibious Soft Robot">
-      -->
-
       <ul>
+
         <li>
           Simulated soft actuators of various sizes to guide the design
           of the jellyfish-like structure and fabrication processes.
@@ -433,13 +493,18 @@
           Integrated sensing, actuation, embedded electronics, and
           microcontroller-based control for coordinated robot motion.
         </li>
+
       </ul>
+
     </div>
 
 
-    <!-- Fiber Sensor -->
+    <!-- =========================
+         Fiber Sensor
+         ========================= -->
 
     <div class="project">
+
       <h3>
         Stretchable Fiber-Optic Sensor for Large-Strain Sensing
         <span class="date">Jan. 2023 – Jun. 2024</span>
@@ -449,13 +514,13 @@
         South China University of Technology | Advisor: Prof. Yitong Zhou
       </p>
 
-      <!--
       <img
-        src="images/fiber_sensor.png"
+        class="project-image"
+        src="images/fiber_sensor.jpg"
         alt="Stretchable Fiber-Optic Sensor">
-      -->
 
       <ul>
+
         <li>
           Fabricated a flexible, stretchable fiber optic sensor
           optimized for continuous health monitoring.
@@ -470,13 +535,18 @@
           Developed a human–machine interaction prototype that
           translated user motion into interaction signals using the sensor.
         </li>
+
       </ul>
+
     </div>
 
 
-    <!-- sEMG Bracelet -->
+    <!-- =========================
+         sEMG Bracelet
+         ========================= -->
 
     <div class="project">
+
       <h3>
         sEMG-Based Gesture Recognition Smart Bracelet
         <span class="date">Jul. 2022 – May 2023</span>
@@ -486,13 +556,8 @@
         South China University of Technology | Advisor: Prof. Longhan Xie
       </p>
 
-      <!--
-      <img
-        src="images/semg_bracelet.png"
-        alt="sEMG-Based Gesture Recognition Smart Bracelet">
-      -->
-
       <ul>
+
         <li>
           Developed signal-processing and recognition methods to address
           weak wrist sEMG signals, noise interference, and inter-user
@@ -504,17 +569,20 @@
           cloud-based training models, and developed a CNN-based
           gesture recognition network.
         </li>
+
       </ul>
+
     </div>
 
   </div>
 
 
-  <!-- =========================
+  <!-- ==================================================
        PUBLICATIONS
-       ========================= -->
+       ================================================== -->
 
   <div class="section" id="publications">
+
     <h2>Publications</h2>
 
     <ul class="pub-list">
@@ -576,12 +644,15 @@
 
     </ul>
 
-    <p><small>† Equal contribution.</small></p>
+    <p>
+      <small>† Equal contribution.</small>
+    </p>
 
 
     <h3>Patents</h3>
 
     <ul class="pub-list">
+
       <li>
         “A Gesture Recognition Smart Bracelet System Based on Surface
         Electromyography Signal,” Invention Patent,
@@ -592,30 +663,34 @@
         “A Base Station Energy Storage Box,” Utility Model Patent,
         second inventor, 2023.
       </li>
+
     </ul>
 
   </div>
 
 
-  <!-- =========================
+  <!-- ==================================================
        TEACHING
-       ========================= -->
+       ================================================== -->
 
   <div class="section" id="teaching">
+
     <h2>Teaching</h2>
 
     <p>
       <strong>Teaching Assistant, Deformable Bodies (COE 3001)</strong><br>
       Georgia Institute of Technology, Summer 2026
     </p>
+
   </div>
 
 
-  <!-- =========================
+  <!-- ==================================================
        SKILLS
-       ========================= -->
+       ================================================== -->
 
   <div class="section" id="skills">
+
     <h2>Skills</h2>
 
     <div class="info-grid">
@@ -630,29 +705,35 @@
       </div>
 
     </div>
+
   </div>
 
 
-  <!-- =========================
+  <!-- ==================================================
        CV
-       ========================= -->
+       ================================================== -->
 
   <div class="section" id="cv">
+
     <h2>CV</h2>
 
     <p>
-      <a href="Yumeng_Cai_CV.pdf" target="_blank">
+      <a
+        href="Yumeng_Cai_CV.pdf"
+        target="_blank">
         Download CV (PDF)
       </a>
     </p>
+
   </div>
 
 
-  <!-- =========================
+  <!-- ==================================================
        CONTACT
-       ========================= -->
+       ================================================== -->
 
   <div class="section" id="contact">
+
     <h2>Contact</h2>
 
     <p>
@@ -683,4 +764,5 @@
   </div>
 
 </body>
+
 </html>
