@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -9,1056 +10,71 @@
 
   <meta
     name="description"
-    content="Yumeng Cai - Robotics researcher at Georgia Institute of Technology. Research interests include medical robotics, surgical robotics, soft robotics, sensing, perception, control, and robot learning."
+    content="Yumeng Cai - Robotics researcher at Georgia Institute of Technology working on medical robotics, surgical robotics, soft robotics, sensing, perception, control, and robot learning."
   >
 
   <title>Yumeng Cai</title>
 
-
-  <style>
-
-
-    /* =========================================================
-       GLOBAL
-       ========================================================= */
-
-    * {
-      box-sizing: border-box;
-    }
-
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-
-    body {
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      max-width: 1080px;
-
-      margin: 0 auto;
-
-      padding:
-        45px
-        28px
-        70px;
-
-      line-height: 1.65;
-
-      color: #222;
-
-      background: #ffffff;
-
-    }
-
-
-    h1,
-    h2,
-    h3 {
-      color: #202020;
-    }
-
-
-    h1 {
-
-      font-size: 2.65rem;
-
-      line-height: 1.15;
-
-      margin:
-        0
-        0
-        7px;
-
-    }
-
-
-    h2 {
-
-      font-size: 1.75rem;
-
-      margin-bottom: 25px;
-
-    }
-
-
-    h3 {
-      line-height: 1.35;
-    }
-
-
-    p {
-      margin-top: 0;
-    }
-
-
-    a {
-
-      color: #0056b3;
-
-      text-decoration: none;
-
-    }
-
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-
-
-    /* =========================================================
-       HERO / PROFILE
-       ========================================================= */
-
-
-    .hero {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 42px;
-
-      margin-bottom: 32px;
-
-    }
-
-
-    .hero-photo {
-
-      flex:
-        0
-        0
-        220px;
-
-    }
-
-
-    .hero-photo img {
-
-      display: block;
-
-      width: 220px;
-
-      height: auto;
-
-      border-radius: 12px;
-
-      box-shadow:
-        0
-        4px
-        16px
-        rgba(0, 0, 0, 0.12);
-
-    }
-
-
-    .hero-content {
-      flex: 1;
-    }
-
-
-    .subtitle {
-
-      font-size: 1.13rem;
-
-      color: #555;
-
-      margin:
-        0
-        0
-        17px;
-
-    }
-
-
-    .hero-intro {
-
-      font-size: 1.02rem;
-
-      max-width: 720px;
-
-      margin-bottom: 18px;
-
-    }
-
-
-    .hero-links {
-
-      display: flex;
-
-      align-items: center;
-
-      flex-wrap: wrap;
-
-      gap:
-        5px
-        14px;
-
-      margin-top: 18px;
-
-    }
-
-
-    .hero-links a {
-      font-weight: 600;
-    }
-
-
-    .separator {
-
-      color: #999;
-
-      font-weight: normal;
-
-    }
-
-
-
-    /* =========================================================
-       NAVIGATION
-       ========================================================= */
-
-
-    .nav {
-
-      border-top:
-        1px
-        solid
-        #ddd;
-
-      border-bottom:
-        1px
-        solid
-        #ddd;
-
-      padding:
-        14px
-        0;
-
-      margin:
-        28px
-        0
-        0;
-
-    }
-
-
-    .nav a {
-
-      display: inline-block;
-
-      margin-right: 24px;
-
-      font-weight: 500;
-
-    }
-
-
-
-    /* =========================================================
-       SECTIONS
-       ========================================================= */
-
-
-    .section {
-      margin-top: 52px;
-    }
-
-
-
-    /* =========================================================
-       ABOUT
-       ========================================================= */
-
-
-    .about-text {
-      max-width: 900px;
-    }
-
-
-
-    /* =========================================================
-       RESEARCH INTERESTS
-       ========================================================= */
-
-
-    .research-interests {
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 10px;
-
-    }
-
-
-    .interest-tag {
-
-      padding:
-        7px
-        14px;
-
-      border:
-        1px
-        solid
-        #d5d5d5;
-
-      border-radius: 18px;
-
-      background: #fafafa;
-
-      color: #444;
-
-      font-size: 0.95rem;
-
-    }
-
-
-
-    /* =========================================================
-       FEATURED RESEARCH
-       ========================================================= */
-
-
-    .featured-project {
-
-      display: flex;
-
-      gap: 34px;
-
-      align-items: center;
-
-      padding: 24px;
-
-      margin-bottom: 30px;
-
-      background: #fafafa;
-
-      border:
-        1px
-        solid
-        #dddddd;
-
-      border-radius: 12px;
-
-    }
-
-
-    .featured-project.reverse {
-      flex-direction: row-reverse;
-    }
-
-
-    .featured-project-image {
-
-      flex:
-        0
-        0
-        43%;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-    }
-
-
-    .featured-project-image img {
-
-      display: block;
-
-      max-width: 100%;
-
-      max-height: 330px;
-
-      width: auto;
-
-      height: auto;
-
-      border-radius: 9px;
-
-    }
-
-
-    .featured-project-content {
-      flex: 1;
-    }
-
-
-    .featured-project-content h3 {
-
-      font-size: 1.25rem;
-
-      margin:
-        0
-        0
-        8px;
-
-    }
-
-
-    .featured-meta {
-
-      color: #666;
-
-      font-style: italic;
-
-      font-size: 0.95rem;
-
-      margin-bottom: 14px;
-
-    }
-
-
-    .featured-date {
-
-      color: #777;
-
-      font-size: 0.92rem;
-
-      margin-bottom: 12px;
-
-    }
-
-
-    .featured-project-content p {
-      margin-bottom: 11px;
-    }
-
-
-
-    /* =========================================================
-       GUIDEWIRE TWO-IMAGE LAYOUT
-       ========================================================= */
-
-
-    .guidewire-pair {
-
-      flex:
-        0
-        0
-        53%;
-
-      display: flex;
-
-      gap: 14px;
-
-      align-items: flex-start;
-
-      justify-content: center;
-
-    }
-
-
-    .guidewire-subfig {
-
-      flex:
-        1
-        1
-        0;
-
-      min-width: 0;
-
-      text-align: center;
-
-    }
-
-
-    .guidewire-image-box {
-
-      height: 250px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-    }
-
-
-    .guidewire-subfig img {
-
-      display: block;
-
-      max-width: 100%;
-
-      max-height: 250px;
-
-      width: auto;
-
-      height: auto;
-
-      object-fit: contain;
-
-      border-radius: 8px;
-
-    }
-
-
-    .guidewire-caption {
-
-      margin-top: 8px;
-
-      font-size: 0.82rem;
-
-      color: #666;
-
-      line-height: 1.35;
-
-    }
-
-
-
-    /* =========================================================
-       FEATURED PROJECT WITHOUT IMAGE
-       ========================================================= */
-
-
-    .featured-project.text-feature {
-
-      display: block;
-
-      padding:
-        28px
-        32px;
-
-    }
-
-
-    .text-feature .featured-project-content {
-      max-width: 880px;
-    }
-
-
-
-    /* =========================================================
-       OTHER PROJECT GRID
-       ========================================================= */
-
-
-    .project-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(
-          2,
-          minmax(0, 1fr)
-        );
-
-      gap: 22px;
-
-    }
-
-
-    .project-card {
-
-      display: flex;
-
-      flex-direction: column;
-
-      overflow: hidden;
-
-      background: #fafafa;
-
-      border:
-        1px
-        solid
-        #dddddd;
-
-      border-radius: 11px;
-
-      transition:
-        transform
-        0.15s
-        ease,
-        box-shadow
-        0.15s
-        ease;
-
-    }
-
-
-    .project-card:hover {
-
-      transform: translateY(-2px);
-
-      box-shadow:
-        0
-        5px
-        15px
-        rgba(0, 0, 0, 0.07);
-
-    }
-
-
-    .project-card-image {
-
-      height: 245px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      padding: 14px;
-
-      background: #ffffff;
-
-      border-bottom:
-        1px
-        solid
-        #eeeeee;
-
-    }
-
-
-    .project-card-image img {
-
-      display: block;
-
-      max-width: 100%;
-
-      max-height: 100%;
-
-      width: auto;
-
-      height: auto;
-
-      border-radius: 7px;
-
-    }
-
-
-    .project-card-content {
-
-      padding:
-        18px
-        19px
-        20px;
-
-    }
-
-
-    .project-card h3 {
-
-      font-size: 1.08rem;
-
-      margin:
-        0
-        0
-        7px;
-
-    }
-
-
-    .project-card-meta {
-
-      color: #666;
-
-      font-size: 0.90rem;
-
-      font-style: italic;
-
-      margin-bottom: 9px;
-
-    }
-
-
-    .project-card-date {
-
-      color: #777;
-
-      font-size: 0.88rem;
-
-      margin-bottom: 10px;
-
-    }
-
-
-    .project-card p:last-child {
-      margin-bottom: 0;
-    }
-
-
-
-    /* =========================================================
-       TEXT-ONLY OTHER PROJECT CARD
-       ========================================================= */
-
-
-    .project-card.text-only {
-
-      min-height: 260px;
-
-      justify-content: center;
-
-    }
-
-
-    .project-card.text-only .project-card-content {
-      padding: 25px;
-    }
-
-
-
-    /* =========================================================
-       PUBLICATIONS
-       ========================================================= */
-
-
-    .publication {
-
-      margin-bottom: 20px;
-
-      padding-bottom: 18px;
-
-      border-bottom:
-        1px
-        solid
-        #eeeeee;
-
-    }
-
-
-    .publication:last-child {
-      border-bottom: none;
-    }
-
-
-    .publication-title {
-
-      font-weight: 600;
-
-      margin-bottom: 3px;
-
-    }
-
-
-    .publication-authors {
-      margin-bottom: 2px;
-    }
-
-
-    .publication-venue {
-      color: #555;
-    }
-
-
-    .equal-contribution {
-
-      color: #666;
-
-      font-size: 0.9rem;
-
-      margin-top: 15px;
-
-    }
-
-
-
-    /* =========================================================
-       PATENTS
-       ========================================================= */
-
-
-    .patent {
-      margin-bottom: 14px;
-    }
-
-
-
-    /* =========================================================
-       TEACHING / SKILLS
-       ========================================================= */
-
-
-    .info-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        170px
-        1fr;
-
-      gap:
-        11px
-        20px;
-
-      max-width: 850px;
-
-    }
-
-
-    .info-label {
-      font-weight: 600;
-    }
-
-
-
-    /* =========================================================
-       CONTACT
-       ========================================================= */
-
-
-    .contact-row {
-      margin-bottom: 8px;
-    }
-
-
-
-    /* =========================================================
-       FOOTER
-       ========================================================= */
-
-
-    footer {
-
-      margin-top: 60px;
-
-      padding-top: 20px;
-
-      border-top:
-        1px
-        solid
-        #eeeeee;
-
-      color: #888;
-
-      font-size: 0.88rem;
-
-    }
-
-
-
-    /* =========================================================
-       MOBILE
-       ========================================================= */
-
-
-    @media (max-width: 760px) {
-
-
-      body {
-
-        padding:
-          28px
-          18px
-          50px;
-
-      }
-
-
-      h1 {
-        font-size: 2.2rem;
-      }
-
-
-      .hero {
-
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 22px;
-
-      }
-
-
-      .hero-photo {
-        flex: none;
-      }
-
-
-      .hero-photo img {
-        width: 190px;
-      }
-
-
-      .hero-content {
-        width: 100%;
-      }
-
-
-      .hero-content h1,
-      .subtitle {
-        text-align: center;
-      }
-
-
-      .hero-links {
-        justify-content: center;
-      }
-
-
-      .nav {
-        text-align: center;
-      }
-
-
-      .nav a {
-
-        margin:
-          4px
-          10px;
-
-      }
-
-
-      .featured-project,
-      .featured-project.reverse {
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-      }
-
-
-      .featured-project-image {
-
-        flex: none;
-
-        width: 100%;
-
-      }
-
-
-      .featured-project-image img {
-        max-height: none;
-      }
-
-
-      .guidewire-pair {
-
-        width: 100%;
-
-        flex: none;
-
-      }
-
-
-      .guidewire-image-box {
-        height: 220px;
-      }
-
-
-      .guidewire-subfig img {
-        max-height: 220px;
-      }
-
-
-      .project-grid {
-        grid-template-columns: 1fr;
-      }
-
-
-      .project-card-image {
-
-        height: auto;
-
-        min-height: 230px;
-
-      }
-
-
-      .info-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 3px;
-
-      }
-
-
-      .info-label {
-        margin-top: 10px;
-      }
-
-
-    }
-
-
-
-    /* =========================================================
-       VERY SMALL SCREEN
-       ========================================================= */
-
-
-    @media (max-width: 520px) {
-
-
-      .guidewire-pair {
-
-        flex-direction: column;
-
-        gap: 22px;
-
-      }
-
-
-      .guidewire-subfig {
-        width: 100%;
-      }
-
-
-      .guidewire-image-box {
-        height: auto;
-      }
-
-
-      .guidewire-subfig img {
-
-        max-height: 300px;
-
-        margin: 0 auto;
-
-      }
-
-
-    }
-
-
-  </style>
+  <link rel="stylesheet" href="styles.css">
 
 </head>
-
 
 
 <body>
 
 
+  <!-- ======================================================
+       NAVIGATION
+       ====================================================== -->
 
-  <!-- =========================================================
+  <header class="topbar">
+
+    <a class="site-name" href="index.html">
+      Yumeng Cai
+    </a>
+
+    <nav class="topnav">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="#research">
+        Research
+      </a>
+
+      <a href="#publications">
+        Publications
+      </a>
+
+      <a href="Yumeng_Cai_CV.pdf" target="_blank">
+        CV
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- ======================================================
        HERO
-       ========================================================= -->
+       ====================================================== -->
 
-
-  <header class="hero">
+  <section class="hero">
 
 
     <div class="hero-photo">
-
 
       <img
         src="images/profile.jpg"
         alt="Yumeng Cai">
 
-
     </div>
-
 
 
     <div class="hero-content">
@@ -1069,7 +85,7 @@
       </h1>
 
 
-      <p class="subtitle">
+      <p class="hero-subtitle">
 
         M.S. in Robotics,
         Georgia Institute of Technology
@@ -1094,16 +110,13 @@
 
       <div class="hero-links">
 
-
         <a href="mailto:ycai395@gatech.edu">
           Email
         </a>
 
-
         <span class="separator">
           |
         </span>
-
 
         <a
           href="Yumeng_Cai_CV.pdf"
@@ -1111,11 +124,9 @@
           CV (PDF)
         </a>
 
-
         <span class="separator">
           |
         </span>
-
 
         <a
           href="https://www.linkedin.com/in/yumeng-cai-98382b378/"
@@ -1123,106 +134,7 @@
           LinkedIn
         </a>
 
-
       </div>
-
-
-    </div>
-
-
-  </header>
-
-
-
-  <!-- =========================================================
-       NAVIGATION
-       ========================================================= -->
-
-
-  <nav class="nav">
-
-
-    <a href="#about">
-      About
-    </a>
-
-
-    <a href="#research">
-      Research
-    </a>
-
-
-    <a href="#publications">
-      Publications
-    </a>
-
-
-    <a href="#teaching">
-      Teaching
-    </a>
-
-
-    <a href="#skills">
-      Skills
-    </a>
-
-
-    <a href="#cv">
-      CV
-    </a>
-
-
-    <a href="#contact">
-      Contact
-    </a>
-
-
-  </nav>
-
-
-
-  <!-- =========================================================
-       ABOUT
-       ========================================================= -->
-
-
-  <section
-    class="section"
-    id="about">
-
-
-    <h2>
-      About
-    </h2>
-
-
-    <div class="about-text">
-
-
-      <p>
-
-        I am currently pursuing an M.S. in Robotics at the
-        Georgia Institute of Technology,
-        with an expected graduation date of May 2027.
-
-        Previously,
-        I received my B.E. in Robotics Engineering from
-        South China University of Technology.
-
-      </p>
-
-
-      <p>
-
-        I am particularly interested in developing robotic systems
-        for minimally invasive and image-guided medical procedures,
-        with an emphasis on integrating robotic design,
-        sensing,
-        perception,
-        control,
-        and learning.
-
-      </p>
 
 
     </div>
@@ -1232,10 +144,47 @@
 
 
 
-  <!-- =========================================================
-       RESEARCH INTERESTS
-       ========================================================= -->
+  <!-- ======================================================
+       ABOUT
+       ====================================================== -->
 
+  <section class="section">
+
+
+    <h2>
+      About
+    </h2>
+
+
+    <p class="section-description">
+
+      I am currently pursuing an M.S. in Robotics at the
+      Georgia Institute of Technology, with an expected
+      graduation date of May 2027.
+
+      Previously, I received my B.E. in Robotics Engineering
+      from South China University of Technology.
+
+    </p>
+
+
+    <p>
+
+      I am particularly interested in developing robotic systems
+      for minimally invasive and image-guided medical procedures,
+      with an emphasis on integrating robotic design,
+      sensing, perception, control, and learning.
+
+    </p>
+
+
+  </section>
+
+
+
+  <!-- ======================================================
+       RESEARCH INTERESTS
+       ====================================================== -->
 
   <section class="section">
 
@@ -1247,36 +196,29 @@
 
     <div class="research-interests">
 
-
       <span class="interest-tag">
         Medical Robotics
       </span>
-
 
       <span class="interest-tag">
         Surgical Robotics
       </span>
 
-
       <span class="interest-tag">
         Soft Robotics
       </span>
-
 
       <span class="interest-tag">
         Image-Guided Robotics
       </span>
 
-
       <span class="interest-tag">
         Robot Learning
       </span>
 
-
       <span class="interest-tag">
         Robotic Sensing & Perception
       </span>
-
 
     </div>
 
@@ -1285,10 +227,9 @@
 
 
 
-  <!-- =========================================================
+  <!-- ======================================================
        SELECTED RESEARCH
-       ========================================================= -->
-
+       ====================================================== -->
 
   <section
     class="section"
@@ -1300,643 +241,223 @@
     </h2>
 
 
+    <p class="section-description">
 
-    <!-- =======================================================
-         GUIDEWIRE
-         ======================================================= -->
+      Selected projects in medical robotics,
+      surgical robotics, and soft robotic systems.
 
+      Click any project to view more details.
 
-    <div class="featured-project">
-
-
-      <div class="featured-project-image guidewire-pair">
+    </p>
 
 
-        <div class="guidewire-subfig">
+
+    <div class="featured-grid">
 
 
-          <div class="guidewire-image-box">
+
+      <!-- ==================================================
+           GUIDEWIRE
+           ================================================== -->
+
+      <a
+        class="project-link"
+        href="projects/guidewire.html">
+
+
+        <article class="featured-card">
+
+
+          <div class="featured-image">
+
+
+            <div class="guidewire-preview">
+
+
+              <div class="guidewire-preview-item">
+
+                <img
+                  src="images/guidewire2.png"
+                  alt="Robotic guidewire">
+
+              </div>
+
+
+              <div class="guidewire-preview-item">
+
+                <img
+                  src="images/guidewire.png"
+                  alt="Image-based guidewire tracking">
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+          <div class="featured-content">
+
+
+            <h3>
+              Image-Guided Robotic Guidewire Navigation System
+            </h3>
+
+
+            <div class="project-meta">
+
+              Georgia Tech |
+              Prof. Jaydev P. Desai
+
+            </div>
+
+
+            <p class="project-summary">
+
+              Robotic guidewire design,
+              real-time C-arm image tracking,
+              and image-guided navigation for minimally invasive procedures.
+
+            </p>
+
+
+            <span class="view-project">
+              View Project →
+            </span>
+
+
+          </div>
+
+
+        </article>
+
+
+      </a>
+
+
+
+      <!-- ==================================================
+           SOFT MANIPULATOR
+           ================================================== -->
+
+      <a
+        class="project-link"
+        href="projects/soft-manipulator.html">
+
+
+        <article class="featured-card">
+
+
+          <div class="featured-image">
 
             <img
-              src="images/guidewire2.png"
-              alt="Robotic guidewire system">
+              src="images/Actuation_system.png"
+              alt="Miniature hybrid-actuated soft manipulator">
 
           </div>
 
 
-          <div class="guidewire-caption">
+          <div class="featured-content">
 
-            Robotic guidewire system
+
+            <h3>
+
+              Miniature Hybrid-Actuated Soft Manipulator
+              with FBG-Based Shape Sensing
+
+            </h3>
+
+
+            <div class="project-meta">
+
+              SCUT |
+              Prof. Yitong Zhou
+
+            </div>
+
+
+            <p class="project-summary">
+
+              An 11-mm-diameter hybrid-actuated soft continuum
+              manipulator with FBG-based shape sensing
+              for confined medical procedures.
+
+            </p>
+
+
+            <span class="view-project">
+              View Project →
+            </span>
+
 
           </div>
 
 
-        </div>
+        </article>
+
+
+      </a>
 
 
 
-        <div class="guidewire-subfig">
+      <!-- ==================================================
+           ROBOTIC SURGERY GAP DISCOVERY
+           ================================================== -->
+
+      <a
+        class="project-link"
+        href="projects/gap-discovery.html">
 
 
-          <div class="guidewire-image-box">
+        <article class="featured-card">
 
-            <img
-              src="images/guidewire.png"
-              alt="Image-based guidewire tracking">
+
+          <div class="text-card-placeholder">
+
+            AI-Assisted Robotic Surgery Research Analysis
 
           </div>
 
 
-          <div class="guidewire-caption">
+          <div class="featured-content">
 
-            Image-based guidewire tracking
+
+            <h3>
+              Robotic Surgery Gap Discovery
+            </h3>
+
+
+            <div class="project-meta">
+
+              Georgia Tech |
+              Prof. Jun Ueda
+
+            </div>
+
+
+            <p class="project-summary">
+
+              An AI-assisted pipeline for identifying
+              under-addressed functional needs and research gaps
+              in robotic and laparoscopic surgery.
+
+            </p>
+
+
+            <span class="view-project">
+              View Project →
+            </span>
+
 
           </div>
 
 
-        </div>
+        </article>
 
 
-      </div>
-
-
-
-      <div class="featured-project-content">
-
-
-        <h3>
-
-          Image-Guided Robotic Guidewire Navigation System
-
-        </h3>
-
-
-        <div class="featured-meta">
-
-          Georgia Institute of Technology |
-          Advisor: Prof. Jaydev P. Desai
-
-        </div>
-
-
-        <div class="featured-date">
-
-          Sep. 2025 – Feb. 2026
-
-        </div>
-
-
-        <p>
-
-          Developed a bidirectionally steerable robotic guidewire
-          and its robotic control platform for image-guided
-          minimally invasive procedures.
-
-        </p>
-
-
-        <p>
-
-          My work included real-time C-arm image-based guidewire
-          tracking and an image-guided path-planning framework
-          for navigation toward predefined targets.
-
-        </p>
-
-
-      </div>
-
-
-    </div>
-
-
-
-    <!-- =======================================================
-         SOFT MANIPULATOR
-         ======================================================= -->
-
-
-    <div class="featured-project reverse">
-
-
-      <div class="featured-project-image">
-
-
-        <img
-          src="images/Actuation_system.png"
-          alt="Miniature hybrid-actuated soft manipulator">
-
-
-      </div>
-
-
-
-      <div class="featured-project-content">
-
-
-        <h3>
-
-          Miniature Hybrid-Actuated Soft Manipulator
-          with FBG-Based Shape Sensing
-
-        </h3>
-
-
-        <div class="featured-meta">
-
-          South China University of Technology |
-          Advisor: Prof. Yitong Zhou
-
-        </div>
-
-
-        <div class="featured-date">
-
-          Sep. 2024 – Mar. 2026
-
-        </div>
-
-
-        <p>
-
-          Designed an 11-mm-diameter soft continuum manipulator
-          integrating cable-driven and pneumatic actuation
-          for confined medical procedures.
-
-        </p>
-
-
-        <p>
-
-          Developed an FBG-based shape-sensing pipeline
-          combining data-driven prediction
-          and two-segment piecewise constant curvature modeling
-          for real-time shape reconstruction.
-
-        </p>
-
-
-      </div>
-
-
-    </div>
-
-
-
-    <!-- =======================================================
-         SURGERY GAP DISCOVERY
-         ======================================================= -->
-
-
-    <div class="featured-project text-feature">
-
-
-      <div class="featured-project-content">
-
-
-        <h3>
-
-          Robotic Surgery Gap Discovery
-
-        </h3>
-
-
-        <div class="featured-meta">
-
-          Georgia Institute of Technology |
-          Advisor: Prof. Jun Ueda
-
-        </div>
-
-
-        <div class="featured-date">
-
-          May 2026 – Present
-
-        </div>
-
-
-        <p>
-
-          Developed an AI-assisted analysis pipeline
-          to identify under-addressed functional needs
-          and research gaps in robotic and laparoscopic surgery.
-
-        </p>
-
-
-        <p>
-
-          The project focuses on systematically connecting
-          clinical needs,
-          existing robotic capabilities,
-          and opportunities for future surgical robotic systems.
-
-        </p>
-
-
-      </div>
-
-
-    </div>
-
-
-
-    <!-- =======================================================
-         OTHER PROJECTS
-         ======================================================= -->
-
-
-    <h2
-      style="
-        margin-top: 48px;
-        margin-bottom: 24px;
-      ">
-
-      Other Research Projects
-
-    </h2>
-
-
-
-    <div class="project-grid">
-
-
-
-      <!-- =====================================================
-           EXOSUIT
-           ===================================================== -->
-
-
-      <div class="project-card">
-
-
-        <div class="project-card-image">
-
-
-          <img
-            src="images/exosuit.jpg"
-            alt="Soft wearable assistive exosuit">
-
-
-        </div>
-
-
-
-        <div class="project-card-content">
-
-
-          <h3>
-
-            Soft Wearable Assistive Exosuit
-
-          </h3>
-
-
-          <div class="project-card-meta">
-
-            University of Notre Dame |
-            Prof. Margaret Coad
-
-          </div>
-
-
-          <div class="project-card-date">
-
-            Jul. 2024 – Sep. 2024
-
-          </div>
-
-
-          <p>
-
-            Investigated soft and bioinspired design,
-            modeling,
-            and control methods for wearable assistive systems.
-
-            Led system-level improvements and experimental
-            evaluation focused on comfort and usability.
-
-          </p>
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- =====================================================
-           MANTA RAY
-           ===================================================== -->
-
-
-      <div class="project-card">
-
-
-        <div class="project-card-image">
-
-
-          <img
-            src="images/manta_ray.png"
-            alt="Manta ray-inspired soft robotic swimmer">
-
-
-        </div>
-
-
-
-        <div class="project-card-content">
-
-
-          <h3>
-
-            Manta Ray-Inspired Soft Robotic Swimmer
-
-          </h3>
-
-
-          <div class="project-card-meta">
-
-            South China University of Technology |
-            Prof. Yitong Zhou
-
-          </div>
-
-
-          <div class="project-card-date">
-
-            Jun. 2023 – Sep. 2024
-
-          </div>
-
-
-          <p>
-
-            Designed a bistable soft swimmer using
-            precurved composites and McKibben muscles
-            for snap-through flapping.
-
-            Evaluated forward,
-            reverse,
-            turning,
-            and flipping motions.
-
-          </p>
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- =====================================================
-           QUADRUPEDAL PADDLING
-           ===================================================== -->
-
-
-      <div class="project-card">
-
-
-        <div class="project-card-image">
-
-
-          <img
-            src="images/quadrupedal_paddling.jpg"
-            alt="Quadrupedal robotic paddling">
-
-
-        </div>
-
-
-
-        <div class="project-card-content">
-
-
-          <h3>
-
-            Hydrodynamics of Quadrupedal Robotic Paddling
-
-          </h3>
-
-
-          <div class="project-card-meta">
-
-            South China University of Technology |
-            Prof. Ye Chen
-
-          </div>
-
-
-          <div class="project-card-date">
-
-            Sep. 2023 – Jul. 2024
-
-          </div>
-
-
-          <p>
-
-            Analyzed hydrodynamic forces,
-            power consumption,
-            and flow fields across multiple robotic
-            paddling gait patterns.
-
-            Processed simulation datasets on Ubuntu
-            and visualized CFD results using Tecplot.
-
-          </p>
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- =====================================================
-           FIBER SENSOR
-           ===================================================== -->
-
-
-      <div class="project-card">
-
-
-        <div class="project-card-image">
-
-
-          <img
-            src="images/fiber_sensor.jpg"
-            alt="Stretchable fiber-optic sensor">
-
-
-        </div>
-
-
-
-        <div class="project-card-content">
-
-
-          <h3>
-
-            Stretchable Fiber-Optic Sensor
-            for Large-Strain Sensing
-
-          </h3>
-
-
-          <div class="project-card-meta">
-
-            South China University of Technology |
-            Prof. Yitong Zhou
-
-          </div>
-
-
-          <div class="project-card-date">
-
-            Jan. 2023 – Jun. 2024
-
-          </div>
-
-
-          <p>
-
-            Fabricated a flexible stretchable fiber-optic sensor
-            and characterized its strain range,
-            detection limit,
-            and repeatability.
-
-            Developed a human–machine interaction prototype
-            based on the sensor.
-
-          </p>
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- =====================================================
-           SEMG
-           ===================================================== -->
-
-
-      <div class="project-card">
-
-
-        <div class="project-card-image">
-
-
-          <img
-            src="images/sEMG.png"
-            alt="sEMG gesture recognition smart bracelet">
-
-
-        </div>
-
-
-
-        <div class="project-card-content">
-
-
-          <h3>
-
-            sEMG-Based Gesture Recognition Smart Bracelet
-
-          </h3>
-
-
-          <div class="project-card-meta">
-
-            South China University of Technology |
-            Prof. Longhan Xie
-
-          </div>
-
-
-          <div class="project-card-date">
-
-            Jul. 2022 – May 2023
-
-          </div>
-
-
-          <p>
-
-            Developed signal-processing and recognition methods
-            for weak wrist sEMG signals.
-
-            Designed the PCB and array-based sEMG bracelet
-            and developed a CNN-based gesture recognition system.
-
-          </p>
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <!-- =====================================================
-           SINGLE CELL
-           ===================================================== -->
-
-
-      <div class="project-card text-only">
-
-
-        <div class="project-card-content">
-
-
-          <h3>
-
-            Data-Driven Single-Cell Analysis of
-            GRM5/Grm5-Associated Microglial States
-
-          </h3>
-
-
-          <div class="project-card-meta">
-
-            Georgia Institute of Technology |
-            Prof. Levi Wood
-
-          </div>
-
-
-          <div class="project-card-date">
-
-            Mar. 2026 – Present
-
-          </div>
-
-
-          <p>
-
-            Analyzed mouse and human single-cell transcriptomic data
-            to characterize GRM5/Grm5-associated microglial states.
-
-            Applied Spearman correlation and FDR correction
-            to identify associated genes
-            and compare canonical marker programs.
-
-          </p>
-
-
-        </div>
-
-
-      </div>
+      </a>
 
 
 
@@ -1947,10 +468,287 @@
 
 
 
-  <!-- =========================================================
-       PUBLICATIONS
-       ========================================================= -->
+  <!-- ======================================================
+       OTHER PROJECTS
+       ====================================================== -->
 
+  <section class="section">
+
+
+    <h2>
+      Other Research Projects
+    </h2>
+
+
+    <div class="other-grid">
+
+
+
+      <!-- EXOSUIT -->
+
+      <a
+        class="project-link"
+        href="projects/exosuit.html">
+
+
+        <article class="small-card">
+
+
+          <div class="small-card-image">
+
+            <img
+              src="images/exosuit.jpg"
+              alt="Soft wearable assistive exosuit">
+
+          </div>
+
+
+          <div class="small-card-content">
+
+            <h3>
+              Soft Wearable Assistive Exosuit
+            </h3>
+
+            <p>
+              University of Notre Dame
+            </p>
+
+            <span class="view-project">
+              View →
+            </span>
+
+          </div>
+
+
+        </article>
+
+
+      </a>
+
+
+
+      <!-- MANTA RAY -->
+
+      <a
+        class="project-link"
+        href="projects/manta-ray.html">
+
+
+        <article class="small-card">
+
+
+          <div class="small-card-image">
+
+            <img
+              src="images/manta_ray.png"
+              alt="Manta ray-inspired soft robotic swimmer">
+
+          </div>
+
+
+          <div class="small-card-content">
+
+            <h3>
+              Manta Ray-Inspired Soft Robotic Swimmer
+            </h3>
+
+            <p>
+              Bistable soft aquatic robot
+            </p>
+
+            <span class="view-project">
+              View →
+            </span>
+
+          </div>
+
+
+        </article>
+
+
+      </a>
+
+
+
+      <!-- QUADRUPEDAL -->
+
+      <a
+        class="project-link"
+        href="projects/quadrupedal.html">
+
+
+        <article class="small-card">
+
+
+          <div class="small-card-image">
+
+            <img
+              src="images/quadrupedal_paddling.jpg"
+              alt="Quadrupedal robotic paddling">
+
+          </div>
+
+
+          <div class="small-card-content">
+
+            <h3>
+              Hydrodynamics of Quadrupedal Robotic Paddling
+            </h3>
+
+            <p>
+              CFD analysis of robotic swimming gaits
+            </p>
+
+            <span class="view-project">
+              View →
+            </span>
+
+          </div>
+
+
+        </article>
+
+
+      </a>
+
+
+
+      <!-- FIBER SENSOR -->
+
+      <a
+        class="project-link"
+        href="projects/fiber-sensor.html">
+
+
+        <article class="small-card">
+
+
+          <div class="small-card-image">
+
+            <img
+              src="images/fiber_sensor.jpg"
+              alt="Stretchable fiber optic sensor">
+
+          </div>
+
+
+          <div class="small-card-content">
+
+            <h3>
+              Stretchable Fiber-Optic Sensor
+            </h3>
+
+            <p>
+              Large-strain sensing and HMI
+            </p>
+
+            <span class="view-project">
+              View →
+            </span>
+
+          </div>
+
+
+        </article>
+
+
+      </a>
+
+
+
+      <!-- SEMG -->
+
+      <a
+        class="project-link"
+        href="projects/semg.html">
+
+
+        <article class="small-card">
+
+
+          <div class="small-card-image">
+
+            <img
+              src="images/sEMG.png"
+              alt="sEMG gesture recognition smart bracelet">
+
+          </div>
+
+
+          <div class="small-card-content">
+
+            <h3>
+              sEMG-Based Gesture Recognition Smart Bracelet
+            </h3>
+
+            <p>
+              Wearable sensing and CNN-based gesture recognition
+            </p>
+
+            <span class="view-project">
+              View →
+            </span>
+
+          </div>
+
+
+        </article>
+
+
+      </a>
+
+
+
+      <!-- SINGLE CELL -->
+
+      <a
+        class="project-link"
+        href="projects/single-cell.html">
+
+
+        <article class="small-card">
+
+
+          <div class="text-card-placeholder">
+
+            Single-Cell Transcriptomic Analysis
+
+          </div>
+
+
+          <div class="small-card-content">
+
+            <h3>
+              GRM5/Grm5-Associated Microglial States
+            </h3>
+
+            <p>
+              Data-driven biomedical analysis
+            </p>
+
+            <span class="view-project">
+              View →
+            </span>
+
+          </div>
+
+
+        </article>
+
+
+      </a>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ======================================================
+       PUBLICATIONS
+       ====================================================== -->
 
   <section
     class="section"
@@ -1969,8 +767,7 @@
       <div class="publication-title">
 
         A Miniature Hybrid-Actuated Soft Manipulator
-        with FBG-Based Shape Sensing
-        for Confined Medical Procedures
+        with FBG-Based Shape Sensing for Confined Medical Procedures
 
       </div>
 
@@ -2030,9 +827,7 @@
 
       <div class="publication-venue">
 
-        <i>
-          Acta Mechanica Sinica
-        </i>,
+        <i>Acta Mechanica Sinica</i>,
         2025
 
       </div>
@@ -2048,11 +843,7 @@
       <div class="publication-title">
 
         Computational Fluid Dynamics Analysis of Tandem
-        Floating Offshore Wind Turbines under Coupled
-        Pitch-Surge Motion:
-        A Comparative Study of the National Renewable
-        Energy Laboratory 5 Megawatt and the
-        International Energy Agency 22 Megawatt Turbines
+        Floating Offshore Wind Turbines under Coupled Pitch-Surge Motion
 
       </div>
 
@@ -2072,9 +863,7 @@
 
       <div class="publication-venue">
 
-        <i>
-          Physics of Fluids
-        </i>,
+        <i>Physics of Fluids</i>,
         2025
 
       </div>
@@ -2110,9 +899,7 @@
 
       <div class="publication-venue">
 
-        <i>
-          Biomimetics
-        </i>,
+        <i>Biomimetics</i>,
         2024
 
       </div>
@@ -2163,8 +950,7 @@
       <div class="publication-title">
 
         Residual Reinforcement Learning Based on
-        Inverse Kinematic Modeling
-        for Soft Robotic Arm Control
+        Inverse Kinematic Modeling for Soft Robotic Arm Control
 
       </div>
 
@@ -2185,8 +971,7 @@
 
         <i>
           ASME Journal of Dynamic Systems,
-          Measurement,
-          and Control
+          Measurement, and Control
         </i>,
         2024
 
@@ -2202,8 +987,7 @@
 
       <div class="publication-title">
 
-        Portable sEMG-Controlled
-        Hand Electrical Stimulation System
+        Portable sEMG-Controlled Hand Electrical Stimulation System
 
       </div>
 
@@ -2224,9 +1008,7 @@
 
       <div class="publication-venue">
 
-        <i>
-          IEEE Sensors Journal
-        </i>,
+        <i>IEEE Sensors Journal</i>,
         2024
 
       </div>
@@ -2235,76 +1017,20 @@
     </div>
 
 
-
     <p class="equal-contribution">
       † Equal contribution.
     </p>
-
-
-
-    <!-- =======================================================
-         PATENTS
-         ======================================================= -->
-
-
-    <h2
-      style="
-        margin-top: 45px;
-        margin-bottom: 20px;
-      ">
-
-      Patents
-
-    </h2>
-
-
-
-    <div class="patent">
-
-      <strong>
-
-        A Gesture Recognition Smart Bracelet System
-        Based on Surface Electromyography Signal
-
-      </strong>
-
-      <br>
-
-      Invention Patent,
-      Second Inventor,
-      2023
-
-    </div>
-
-
-
-    <div class="patent">
-
-      <strong>
-        A Base Station Energy Storage Box
-      </strong>
-
-      <br>
-
-      Utility Model Patent,
-      Second Inventor,
-      2023
-
-    </div>
 
 
   </section>
 
 
 
-  <!-- =========================================================
+  <!-- ======================================================
        TEACHING
-       ========================================================= -->
+       ====================================================== -->
 
-
-  <section
-    class="section"
-    id="teaching">
+  <section class="section">
 
 
     <h2>
@@ -2321,10 +1047,7 @@
 
       <br>
 
-      Georgia Institute of Technology
-
-      <br>
-
+      Georgia Institute of Technology,
       Summer 2026
 
     </p>
@@ -2334,14 +1057,11 @@
 
 
 
-  <!-- =========================================================
+  <!-- ======================================================
        SKILLS
-       ========================================================= -->
+       ====================================================== -->
 
-
-  <section
-    class="section"
-    id="skills">
+  <section class="section">
 
 
     <h2>
@@ -2356,30 +1076,18 @@
         Programming
       </div>
 
-
       <div>
-        Python,
-        C/C++,
-        MATLAB,
-        R
+        Python, C/C++, MATLAB, R
       </div>
-
 
 
       <div class="info-label">
         Engineering Tools
       </div>
 
-
       <div>
-
-        SolidWorks,
-        Altium Designer,
-        Arduino,
-        Tecplot,
-        ANSYS Mechanical,
-        Linux (Ubuntu)
-
+        SolidWorks, Altium Designer, Arduino,
+        Tecplot, ANSYS Mechanical, Linux (Ubuntu)
       </div>
 
 
@@ -2390,42 +1098,9 @@
 
 
 
-  <!-- =========================================================
-       CV
-       ========================================================= -->
-
-
-  <section
-    class="section"
-    id="cv">
-
-
-    <h2>
-      CV
-    </h2>
-
-
-    <p>
-
-      <a
-        href="Yumeng_Cai_CV.pdf"
-        target="_blank">
-
-        Download CV (PDF)
-
-      </a>
-
-    </p>
-
-
-  </section>
-
-
-
-  <!-- =========================================================
+  <!-- ======================================================
        CONTACT
-       ========================================================= -->
-
+       ====================================================== -->
 
   <section
     class="section"
@@ -2437,31 +1112,20 @@
     </h2>
 
 
+    <p>
 
-    <div class="contact-row">
-
-
-      <strong>
-        Email:
-      </strong>
-
+      Email:
 
       <a href="mailto:ycai395@gatech.edu">
         ycai395@gatech.edu
       </a>
 
-
-    </div>
-
+    </p>
 
 
-    <div class="contact-row">
+    <p>
 
-
-      <strong>
-        LinkedIn:
-      </strong>
-
+      LinkedIn:
 
       <a
         href="https://www.linkedin.com/in/yumeng-cai-98382b378/"
@@ -2471,17 +1135,11 @@
 
       </a>
 
-
-    </div>
+    </p>
 
 
   </section>
 
-
-
-  <!-- =========================================================
-       FOOTER
-       ========================================================= -->
 
 
   <footer>
@@ -2489,7 +1147,6 @@
     © 2026 Yumeng Cai
 
   </footer>
-
 
 
 </body>
