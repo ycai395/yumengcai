@@ -85,7 +85,7 @@
     .project-meta {
       margin: 0 0 12px 0;
       color: #555;
-      font-style: italic;
+      font-: italic;
     }
 
     .date {
@@ -118,7 +118,23 @@
     .project-image.manta-image {
       max-width: 300px;
     }
-
+    /* sEMG figure only */
+    .semg-figure {
+      max-width: 820px;
+      margin: 12px auto 16px;
+      text-align: center;
+    }
+    
+    .project-image.semg-image {
+      width: 100%;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    
+    .semg-figure .subfig-caption {
+      margin-top: 6px;
+      text-align: center;
+    }
     /* ==========================
        SIDE-BY-SIDE IMAGES
        ========================== */
@@ -698,36 +714,48 @@
 
 
     <!-- SEMG BRACELET -->
-
+    
     <div class="project">
-
+    
       <h3>
         sEMG-Based Gesture Recognition Smart Bracelet
         <span class="date">Jul. 2022 – May 2023</span>
       </h3>
-
+    
       <p class="project-meta">
         South China University of Technology | Advisor: Prof. Longhan Xie
       </p>
-
+    
+      <div class="semg-figure">
+    
+        <img
+          class="project-image semg-image"
+          src="images/sEMG.png"
+          alt="sEMG-Based Gesture Recognition Smart Bracelet">
+    
+        <div class="subfig-caption">
+          System overview of the sEMG-based gesture recognition smart bracelet
+        </div>
+    
+      </div>
+    
       <ul>
-
+    
         <li>
           Developed signal-processing and recognition methods to address
           weak wrist sEMG signals, noise interference, and inter-user
           variability in gesture recognition.
         </li>
-
+    
         <li>
           Designed the PCB and array-based sEMG bracelet, deployed
           cloud-based training models, and developed a CNN-based
           gesture recognition network.
         </li>
-
+    
       </ul>
-
+    
     </div>
-
 
   </div>
 
