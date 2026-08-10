@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Yumeng Cai</title>
 
   <style>
+
     body {
       font-family: Arial, sans-serif;
       max-width: 960px;
@@ -30,6 +32,11 @@
       font-size: 1.05rem;
     }
 
+
+    /* ==========================
+       NAVIGATION
+       ========================== */
+
     .nav {
       margin: 28px 0 10px;
       padding-bottom: 12px;
@@ -47,9 +54,19 @@
       text-decoration: underline;
     }
 
+
+    /* ==========================
+       SECTIONS
+       ========================== */
+
     .section {
       margin-top: 42px;
     }
+
+
+    /* ==========================
+       RESEARCH PROJECT CARDS
+       ========================== */
 
     .project {
       margin-bottom: 24px;
@@ -71,9 +88,18 @@
       font-style: italic;
     }
 
-    /* ==================================================
+    .date {
+      float: right;
+      font-weight: normal;
+      color: #555;
+      font-size: 0.95rem;
+      margin-left: 20px;
+    }
+
+
+    /* ==========================
        SINGLE PROJECT IMAGE
-       ================================================== */
+       ========================== */
 
     .project-image {
       width: 100%;
@@ -84,15 +110,15 @@
       display: block;
     }
 
-    /* Smaller single image, currently used for Exosuit */
-    .project-image.small-single {
+    /* Exosuit image only */
+    .project-image.exosuit-image {
       max-width: 300px;
     }
 
 
-    /* ==================================================
-       SIDE-BY-SIDE SUBFIGURES
-       ================================================== */
+    /* ==========================
+       SIDE-BY-SIDE IMAGES
+       ========================== */
 
     .subfig-row {
       display: flex;
@@ -131,10 +157,10 @@
     }
 
 
-    /* ==================================================
-       LARGE SIDE-BY-SIDE FIGURES
-       Used for Soft Manipulator
-       ================================================== */
+    /* ==========================
+       LARGE IMAGE PAIR
+       Soft Manipulator
+       ========================== */
 
     .subfig-row.large-pair {
       gap: 20px;
@@ -150,17 +176,9 @@
     }
 
 
-    /* ==================================================
-       OTHER STYLES
-       ================================================== */
-
-    .date {
-      float: right;
-      font-weight: normal;
-      color: #555;
-      font-size: 0.95rem;
-      margin-left: 20px;
-    }
+    /* ==========================
+       LISTS
+       ========================== */
 
     ul {
       padding-left: 22px;
@@ -175,6 +193,11 @@
       margin-bottom: 12px;
     }
 
+
+    /* ==========================
+       SKILLS
+       ========================== */
+
     .info-grid {
       display: grid;
       grid-template-columns: 160px 1fr;
@@ -186,14 +209,19 @@
       font-weight: bold;
     }
 
+
+    /* ==========================
+       LINKS
+       ========================== */
+
     a {
       color: #0056b3;
     }
 
 
-    /* ==================================================
+    /* ==========================
        MOBILE
-       ================================================== */
+       ========================== */
 
     @media (max-width: 700px) {
 
@@ -222,12 +250,15 @@
         flex: 1 1 100%;
         max-width: 500px;
       }
+
     }
+
   </style>
 </head>
 
 
 <body>
+
 
   <!-- ==================================================
        HEADER
@@ -244,7 +275,7 @@
     My research interests include medical robotics, robotic surgery,
     soft robotics, and intelligent robotic systems.
     My work spans image-guided robotic navigation, soft robotic manipulators,
-    surgical workflow and gap analysis, wearable assistive robotics,
+    AI-assisted surgical gap discovery, wearable assistive robotics,
     and data-driven biomedical research.
   </p>
 
@@ -254,13 +285,21 @@
        ================================================== -->
 
   <div class="nav">
+
     <a href="#about">About</a>
+
     <a href="#research">Research</a>
+
     <a href="#publications">Publications</a>
+
     <a href="#teaching">Teaching</a>
+
     <a href="#skills">Skills</a>
+
     <a href="#cv">CV</a>
+
     <a href="#contact">Contact</a>
+
   </div>
 
 
@@ -274,7 +313,8 @@
 
     <p>
       I am currently pursuing an M.S. in Robotics at the Georgia Institute
-      of Technology, with an expected graduation date of May 2027.
+      of Technology, with a GPA of 3.82/4.0 and an expected graduation date
+      of May 2027.
       Previously, I received my B.E. in Robotics Engineering from
       South China University of Technology.
     </p>
@@ -283,8 +323,8 @@
       My current research focuses on medical and surgical robotics,
       including image-guided robotic navigation, soft robotic systems,
       and AI-assisted analysis of robotic surgical workflows.
-      I am also interested in integrating sensing, perception, control,
-      and learning for intelligent robotic systems.
+      I am particularly interested in integrating sensing, perception,
+      control, and learning for intelligent robotic systems.
     </p>
 
   </div>
@@ -300,7 +340,7 @@
 
 
     <!-- ==================================================
-         Robotic Surgery Gap Discovery
+         ROBOTIC SURGERY GAP DISCOVERY
          ================================================== -->
 
     <div class="project">
@@ -315,18 +355,20 @@
       </p>
 
       <ul>
+
         <li>
           Developed an AI-assisted analysis pipeline to identify
           under-addressed functional needs and research gaps in robotic
           and laparoscopic surgery.
         </li>
+
       </ul>
 
     </div>
 
 
     <!-- ==================================================
-         Single-Cell Analysis
+         SINGLE-CELL ANALYSIS
          ================================================== -->
 
     <div class="project">
@@ -359,7 +401,7 @@
 
 
     <!-- ==================================================
-         Guidewire
+         GUIDEWIRE
          ================================================== -->
 
     <div class="project">
@@ -374,16 +416,17 @@
       </p>
 
 
-      <!-- TWO GUIDEWIRE IMAGES -->
-
       <div class="subfig-row">
+
 
         <div class="subfig">
 
           <div class="subfig-imgbox">
+
             <img
               src="images/guidewire2.png"
               alt="Robotic guidewire">
+
           </div>
 
           <div class="subfig-caption">
@@ -396,9 +439,11 @@
         <div class="subfig">
 
           <div class="subfig-imgbox">
+
             <img
               src="images/guidewire.png"
               alt="Guidewire tracking">
+
           </div>
 
           <div class="subfig-caption">
@@ -406,6 +451,7 @@
           </div>
 
         </div>
+
 
       </div>
 
@@ -433,7 +479,7 @@
 
 
     <!-- ==================================================
-         Soft Manipulator
+         SOFT MANIPULATOR
          ================================================== -->
 
     <div class="project">
@@ -448,16 +494,17 @@
       </p>
 
 
-      <!-- LARGE TWO-IMAGE VERSION -->
-
       <div class="subfig-row large-pair">
+
 
         <div class="subfig">
 
           <div class="subfig-imgbox">
+
             <img
               src="images/Actuation_system.png"
               alt="Soft Manipulator System">
+
           </div>
 
           <div class="subfig-caption">
@@ -470,9 +517,11 @@
         <div class="subfig">
 
           <div class="subfig-imgbox">
+
             <img
               src="images/ShapeRecon_workspace.png"
-              alt="Shape Reconstruction">
+              alt="FBG-based shape reconstruction">
+
           </div>
 
           <div class="subfig-caption">
@@ -481,6 +530,7 @@
 
         </div>
 
+
       </div>
 
 
@@ -488,7 +538,8 @@
 
         <li>
           Designed a miniature soft continuum robot integrating
-          cable-driven and pneumatic actuation for minimally invasive procedures.
+          cable-driven and pneumatic actuation for minimally invasive
+          procedures.
         </li>
 
         <li>
@@ -508,7 +559,7 @@
 
 
     <!-- ==================================================
-         Exosuit
+         EXOSUIT
          ================================================== -->
 
     <div class="project">
@@ -523,10 +574,8 @@
       </p>
 
 
-      <!-- SMALLER SINGLE IMAGE -->
-
       <img
-        class="project-image small-single"
+        class="project-image exosuit-image"
         src="images/exosuit.jpg"
         alt="Soft Wearable Assistive Exosuit">
 
@@ -550,7 +599,7 @@
 
 
     <!-- ==================================================
-         Quadrupedal Paddling
+         QUADRUPEDAL PADDLING
          ================================================== -->
 
     <div class="project">
@@ -564,10 +613,12 @@
         South China University of Technology | Advisor: Prof. Ye Chen
       </p>
 
+
       <img
         class="project-image"
         src="images/quadrupedal_paddling.jpg"
         alt="Hydrodynamics of Quadrupedal Robotic Paddling">
+
 
       <ul>
 
@@ -593,7 +644,7 @@
 
 
     <!-- ==================================================
-         Jellyfish Robot
+         JELLYFISH
          ================================================== -->
 
     <div class="project">
@@ -625,7 +676,7 @@
 
 
     <!-- ==================================================
-         Fiber Sensor
+         FIBER SENSOR
          ================================================== -->
 
     <div class="project">
@@ -639,10 +690,12 @@
         South China University of Technology | Advisor: Prof. Yitong Zhou
       </p>
 
+
       <img
         class="project-image"
         src="images/fiber_sensor.jpg"
         alt="Stretchable Fiber-Optic Sensor">
+
 
       <ul>
 
@@ -667,7 +720,7 @@
 
 
     <!-- ==================================================
-         sEMG Bracelet
+         SEMG BRACELET
          ================================================== -->
 
     <div class="project">
@@ -699,6 +752,7 @@
 
     </div>
 
+
   </div>
 
 
@@ -712,6 +766,7 @@
 
     <ul class="pub-list">
 
+
       <li>
         <strong>Yumeng Cai†</strong>, L. Gan†, Y. Zhang, X. Wang, Y. Zhou,
         “A Miniature Hybrid-Actuated Soft Manipulator with FBG-Based Shape
@@ -720,6 +775,7 @@
         2026.
       </li>
 
+
       <li>
         Y. Wang†, <strong>Yumeng Cai†</strong>, M. Pang, Y. Xu, G. Kassab,
         C. Zhou, G. Chase, X. Chen, H. Luo and Y. Chen,
@@ -727,6 +783,7 @@
         Ventricular Contractility,”
         <i>Acta Mechanica Sinica</i>, 2025.
       </li>
+
 
       <li>
         B. Xie, Y. Wang, <strong>Yumeng Cai</strong>, Z. Ouyang, C. Zhu,
@@ -738,6 +795,7 @@
         <i>Physics of Fluids</i>, 2025.
       </li>
 
+
       <li>
         Y. Wang†, <strong>Yumeng Cai†</strong>, B. Xie, C. Zhu, H. Luo,
         Y. Li, and Y. Chen,
@@ -745,34 +803,46 @@
         <i>Biomimetics</i>, 2024.
       </li>
 
+
       <li>
         L. Gan, Y. Xu, <strong>Yumeng Cai</strong>, Y. Zhou,
         “A High Sensitivity Flexible Stretchable Fiber Optic Sensor based
         on the Waveguide Loss Principle,”
-        <i>IEEE Transactions on Instrumentation and Measurement</i>, 2024.
+        <i>IEEE Transactions on Instrumentation and Measurement</i>,
+        2024.
       </li>
+
 
       <li>
         J. Liang, G. Lou, F. Zhou, <strong>Yumeng Cai</strong>, C. Wang,
         Y. Zhou,
         “Residual Reinforcement Learning Based on Inverse Kinematic Modeling
         for Soft Robotic Arm Control,”
-        <i>ASME Journal of Dynamic Systems, Measurement, and Control</i>, 2024.
+        <i>ASME Journal of Dynamic Systems, Measurement, and Control</i>,
+        2024.
       </li>
+
 
       <li>
         H. Huang, S. Zhang, Y. Chen, S. Liu, Z. Chen,
         <strong>Yumeng Cai</strong>, H. Li, L. Xie,
         “Portable sEMG-Controlled Hand Electrical Stimulation System,”
-        <i>IEEE Sensors Journal</i>, 2024.
+        <i>IEEE Sensors Journal</i>,
+        2024.
       </li>
 
+
     </ul>
+
 
     <p>
       <small>† Equal contribution.</small>
     </p>
 
+
+    <!-- ==================================================
+         PATENTS
+         ================================================== -->
 
     <h3>Patents</h3>
 
@@ -780,16 +850,17 @@
 
       <li>
         “A Gesture Recognition Smart Bracelet System Based on Surface
-        Electromyography Signal,” Invention Patent,
-        second inventor, 2023.
+        Electromyography Signal,”
+        Invention Patent, second inventor, 2023.
       </li>
 
       <li>
-        “A Base Station Energy Storage Box,” Utility Model Patent,
-        second inventor, 2023.
+        “A Base Station Energy Storage Box,”
+        Utility Model Patent, second inventor, 2023.
       </li>
 
     </ul>
+
 
   </div>
 
@@ -803,7 +874,10 @@
     <h2>Teaching</h2>
 
     <p>
-      <strong>Teaching Assistant, Deformable Bodies (COE 3001)</strong><br>
+      <strong>
+        Teaching Assistant, Deformable Bodies (COE 3001)
+      </strong>
+      <br>
       Georgia Institute of Technology, Summer 2026
     </p>
 
@@ -818,18 +892,29 @@
 
     <h2>Skills</h2>
 
+
     <div class="info-grid">
 
-      <div class="info-label">Programming</div>
-      <div>Python, C/C++, MATLAB, R</div>
+      <div class="info-label">
+        Programming
+      </div>
 
-      <div class="info-label">Engineering Tools</div>
       <div>
-        SolidWorks, Altium Designer, Arduino, Tecplot,
-        ANSYS Mechanical, Linux (Ubuntu)
+        Python, C/C++, MATLAB, R
+      </div>
+
+
+      <div class="info-label">
+        Engineering Tools
+      </div>
+
+      <div>
+        SolidWorks, Altium Designer, Arduino,
+        Tecplot, ANSYS Mechanical, Linux (Ubuntu)
       </div>
 
     </div>
+
 
   </div>
 
@@ -843,11 +928,15 @@
     <h2>CV</h2>
 
     <p>
+
       <a
-        href="Yumeng_Cai_CV.pdf"
+        href="Yumeng Cai_CV.pdf"
         target="_blank">
+
         Download CV (PDF)
+
       </a>
+
     </p>
 
   </div>
@@ -861,6 +950,7 @@
 
     <h2>Contact</h2>
 
+
     <p>
       Email:
       <a href="mailto:ycai395@gatech.edu">
@@ -868,25 +958,37 @@
       </a>
     </p>
 
+
     <p>
       LinkedIn:
+
       <a
         href="https://www.linkedin.com/in/yumeng-cai-98382b378/"
         target="_blank">
+
         LinkedIn Profile
+
       </a>
+
     </p>
+
 
     <p>
       GitHub:
+
       <a
         href="https://github.com/ycai395"
         target="_blank">
+
         github.com/ycai395
+
       </a>
+
     </p>
 
+
   </div>
+
 
 </body>
 
