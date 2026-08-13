@@ -15,7 +15,7 @@
    统一图片显示区域高度 */
 .project-page .figure-box,
 .project-page .detail-image-box {
-  height: 200px !important;
+  height: 300px !important;
   min-height: 0 !important;
 
   display: flex !important;
