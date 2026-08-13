@@ -1,316 +1,64 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>
-    Residual Reinforcement Learning for Soft Robotic Arm Control | Yumeng Cai
-  </title>
-
+  <title>Residual Reinforcement Learning Based on Inverse Kinematic Modeling for Soft Robotic Arm Control | Yumeng Cai</title>
   <link rel="stylesheet" href="../styles.css">
-
 </head>
-
-
 <body>
+<header class="topbar">
+  <a class="site-name" href="../index.html">Yumeng Cai</a>
+  <nav class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#research">Research</a>
+    <a href="../index.html#publications">Publications</a>
+    <a href="../Yumeng_Cai_CV.pdf" target="_blank">CV</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+</header>
 
-
-  <header class="topbar">
-
-    <a class="site-name" href="../index.html">
-      Yumeng Cai
-    </a>
-
-    <nav class="topnav">
-
-      <a href="../index.html">Home</a>
-
-      <a href="../index.html#research">Research</a>
-
-      <a href="../index.html#publications">Publications</a>
-
-      <a
-        href="../Yumeng_Cai_CV.pdf"
-        target="_blank">
-        CV
-      </a>
-
-      <a href="../index.html#contact">Contact</a>
-
-    </nav>
-
+<main class="project-page">
+  <a class="back-link" href="../index.html#research">← Back to Research</a>
+  <header class="project-header">
+    <h1>Residual Reinforcement Learning Based on Inverse Kinematic Modeling for Soft Robotic Arm Control</h1>
+    <div class="project-header-meta">Published in ASME Journal of Dynamic Systems, Measurement, and Control</div>
+    <div class="project-header-date">2025</div>
   </header>
 
-
-
-  <main class="project-page">
-
-
-    <a
-      class="back-link"
-      href="../index.html#research">
-
-      ← Back to Research
-
-    </a>
-
-
-
-    <header class="project-header">
-
-
-      <h1>
-
-        Residual Reinforcement Learning Based on
-        Inverse Kinematic Modeling for Soft Robotic Arm Control
-
-      </h1>
-
-
-      <div class="project-header-meta">
-
-        South China University of Technology |
-        Advisor: Prof. Yitong Zhou
-
-      </div>
-
-
-      <div class="project-header-date">
-
-        Published in ASME Journal of Dynamic Systems,
-        Measurement, and Control, 2025
-
-      </div>
-
-
-    </header>
-
-
-
-    <!-- =====================================================
-         SOFT ROBOTIC ARM
-         ===================================================== -->
-
+  <div class="detail-two">
     <div class="detail-figure">
-
-
-      <div class="detail-image-box">
-
-        <img
-          src="../images/rrl_soft_arm_robot.png"
-          alt="Soft robotic arm">
-
-      </div>
-
-
-      <div class="detail-caption">
-
-        Soft robotic arm used for modeling and control
-
-      </div>
-
-
+      <div class="detail-image-box"><img src="../images/rrl_soft_arm_robot.png" alt="Soft robotic arm"></div>
+      <div class="detail-caption">Soft robotic arm</div>
     </div>
-
-
-
-    <!-- =====================================================
-         OVERVIEW
-         ===================================================== -->
-
-    <section class="project-section">
-
-
-      <h2>
-        Overview
-      </h2>
-
-
-      <p>
-
-        This work developed a residual reinforcement learning
-        framework for improving the control accuracy and training
-        efficiency of a pneumatic soft robotic arm.
-
-        The key idea is to use an inverse kinematic model
-        as prior knowledge and allow reinforcement learning
-        to learn only the residual correction needed to compensate
-        for modeling errors and unmodeled nonlinearities.
-
-      </p>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         METHOD
-         ===================================================== -->
-
-    <section class="project-section">
-
-
-      <h2>
-        Method
-      </h2>
-
-
-      <p>
-
-        A piecewise constant curvature-based kinematic model
-        was first established to map pneumatic chamber pressures
-        to the end-effector position of the soft robotic arm.
-
-        The inverse kinematic model was then used to generate
-        an initial control solution for a target position.
-
-      </p>
-
-
-      <p>
-
-        Residual reinforcement learning was introduced
-        to refine this initial solution.
-
-        Instead of learning absolute pressure commands from scratch,
-        the policy generates small residual pressure adjustments
-        around the inverse-kinematic prediction.
-
-        Proximal Policy Optimization was used to train the policy
-        in a continuous action space.
-
-      </p>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         RESULTS
-         ===================================================== -->
-
-    <section class="project-section">
-
-
-      <h2>
-        Results
-      </h2>
-
-
-      <p>
-
-        The inverse kinematic controller alone produced
-        substantially larger trajectory-tracking errors
-        because of simplifying assumptions such as neglecting
-        gravity and payload effects.
-
-      </p>
-
-
-      <p>
-
-        By combining inverse kinematics with residual reinforcement
-        learning, the trajectory-tracking mean absolute error
-        was reduced to approximately 4.8–7.6 mm
-        under loading conditions from 0 g to 300 g.
-
-      </p>
-
-
-      <p>
-
-        The residual reinforcement learning framework required
-        only 30,000 training steps, compared with approximately
-        300,000 steps for conventional model-free reinforcement
-        learning, corresponding to about a 90% reduction
-        in training steps.
-
-      </p>
-
-
-    </section>
-
-
-
-    <!-- =====================================================
-         TRAJECTORY TRACKING
-         ===================================================== -->
-
     <div class="detail-figure">
-
-
-      <div class="detail-image-box">
-
-        <img
-          src="../images/rrl_soft_arm_trajectory_tracking.png"
-          alt="Trajectory tracking results">
-
-      </div>
-
-
-      <div class="detail-caption">
-
-        Trajectory tracking under different payload conditions
-
-      </div>
-
-
+      <div class="detail-image-box"><img src="../images/rrl_soft_arm_trajectory_tracking.png" alt="Trajectory tracking"></div>
+      <div class="detail-caption">Trajectory tracking under different payload conditions</div>
     </div>
+  </div>
 
+  <section class="project-section"><h2>Overview</h2>
+    <p>This work proposed a residual reinforcement learning (RRL) framework that uses an inverse kinematic model as prior knowledge for soft robotic arm control. Instead of learning the entire control policy from scratch, the RL policy learns residual pressure corrections around an inverse-kinematic initial solution.</p>
+  </section>
 
+  <section class="project-section"><h2>Method</h2>
+    <p>A piecewise constant curvature-based kinematic model maps pneumatic chamber pressure to end-effector position. The inverse model initializes pressure commands for target positions, while a PPO-based residual policy compensates for modeling errors and unmodeled effects such as payload and gravity.</p>
+  </section>
 
-    <!-- =====================================================
-         PUBLICATION
-         ===================================================== -->
+  <section class="project-section"><h2>Results</h2>
+    <div class="result-highlight">
+      <div class="metric"><strong>30,000</strong>RRL training steps</div>
+      <div class="metric"><strong>90%</strong>reduction versus model-free RL training steps</div>
+      <div class="metric"><strong>4.8-7.6 mm</strong>RRL trajectory-tracking MAE</div>
+    </div>
+    <p>The inverse-kinematic controller alone produced much larger errors, while RRL achieved accurate circular and Viviani trajectory tracking under payloads from 0 g to 300 g.</p>
+  </section>
 
-    <section class="project-section">
+  <section class="project-section"><h2>Publication</h2>
+    <p>J. Liang†, G. Lou†, F. Zhou, <strong>Yumeng Cai</strong>, C. Wang, and Y. Zhou, “Residual Reinforcement Learning Based on Inverse Kinematic Modeling for Soft Robotic Arm Control,” <i>ASME Journal of Dynamic Systems, Measurement, and Control</i>, 147(6), 061007, 2025.</p>
+  </section>
 
-
-      <h2>
-        Publication
-      </h2>
-
-
-      <p>
-
-        J. Liang, G. Lou, F. Zhou,
-        <strong>Yumeng Cai</strong>,
-        C. Wang, and Y. Zhou,
-
-        “Residual Reinforcement Learning Based on
-        Inverse Kinematic Modeling for Soft Robotic Arm Control,”
-
-        <i>
-          ASME Journal of Dynamic Systems,
-          Measurement, and Control
-        </i>,
-
-        2025.
-
-      </p>
-
-
-    </section>
-
-
-  </main>
-
-
-
-  <footer>
-
-    © 2026 Yumeng Cai
-
-  </footer>
-
-
+</main>
+<footer>© 2026 Yumeng Cai</footer>
 </body>
-
 </html>
